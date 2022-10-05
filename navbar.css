@@ -1,0 +1,63 @@
+body
+{
+    background-color: #a62b5a;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 900;
+
+}
+.navbar {
+    color: #f9dbbd;
+    background-color: white;
+
+}
+
+a {
+    text-decoration: none;
+    color: #450920;
+
+}
+
+.nav-link {
+    color: #f9dbbd;
+    font-size: large;
+    font-weight: 900;
+}
+
+.navbar-toggler-icon {
+    color: #450920;
+}
+
+#abc {
+    letter-spacing: 1px;
+    border-radius: 10px;
+    transition: 0.3s;
+    font-weight: 900;
+    background-color: #a62b5a;
+    color: #f9dbbd;
+}
+
+#abc :hover {
+    opacity: 0%;
+}
+
+#xyz {
+
+    color: #450920;
+}
+
+#xyz :hover {
+    transition: 0.5s;
+    color: #b74671;
+    text-decoration: underline;
+   
+}
+
+
+.dropdown .dropdown-toggle {
+    border: none;
+    font-size: large;
+    background-color: #fff;
+    font-weight: 900;
+}
+
