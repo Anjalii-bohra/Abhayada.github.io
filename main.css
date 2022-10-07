@@ -505,6 +505,65 @@ a {
     }
 
 }
+@media (max-width: 523px) {
+    #fpara {
+        text-align: justify;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #uselink {
+        margin-left: 5px;
+    }
+
+    #cus {
+        margin-left: 5px;
+    }
+
+    #abhay {
+        margin-left: 5px;
+    }
+    #help6{
+        margin-right: 170px;
+        /* margin-bottom: 200px; */
+    }
+    #help4{
+        margin-top: 45px;
+    }
+    .icon-boxes {
+        margin-left: 80px;
+        width: 250px;
+        /* padding-bottom: 400px; */
+    }
+    .icon-box{
+        padding-bottom: 4px;
+}
+    #help8{
+        width: 350px;
+    }
+    #help9{
+        margin-left: 25px;
+    }
+
+    #mv{
+        margin-left: 10px;
+    }
+    #help10{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .card{
+        width: 80px;
+        display: inline-block;
+    }
+    #help11{
+        font-size: medium;
+    }
+    .btn-complaint{
+    padding: 10px;
+    }
+
+}
 body,
 html {
     margin: 0px;
