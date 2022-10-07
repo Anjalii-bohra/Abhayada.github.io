@@ -448,3 +448,8 @@ html {
     margin: 2%;
     margin-top: 2%;
 }
+
+.card-group {
+    width: 70%;
+    height: 70%;
+}
