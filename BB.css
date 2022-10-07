@@ -497,6 +497,8 @@ a {
 
     #grad {
         margin-left: 190px;
+        justify-content: center;
+        align-content: center;
     }
 }
 
