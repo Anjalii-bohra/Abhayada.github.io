@@ -464,8 +464,22 @@ a {
     #abhay {
         margin-left: 5px;
     }
+    #help6{
+        margin-right: 170px;
+        /* margin-bottom: 200px; */
+    }
+    #help4{
+        margin-top: 45px;
+    }
+    .icon-boxes {
+        margin-left: 80px;
+        width: 250px;
+        /* padding-bottom: 400px; */
+    }
+    .icon-box{
+        padding-bottom: 4px;
 }
-
+}
 body,
 html {
     margin: 0px;
