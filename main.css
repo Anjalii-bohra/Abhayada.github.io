@@ -479,6 +479,31 @@ a {
     .icon-box{
         padding-bottom: 4px;
 }
+    #help8{
+        width: 350px;
+    }
+    #help9{
+        margin-left: 25px;
+    }
+
+    #mv{
+        margin-left: 10px;
+    }
+    #help10{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .card{
+        width: 80px;
+        display: inline-block;
+    }
+    #help11{
+        font-size: medium;
+    }
+    .btn-complaint{
+    padding: 15px;
+    }
+
 }
 body,
 html {
