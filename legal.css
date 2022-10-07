@@ -585,4 +585,19 @@ a {
       #abhay{
           margin-left: 5px;
       }
+      #help12 {
+        max-height: 300px;
+        overflow: scroll;
+
   }
+  .wrap-contact1{
+    height:500px;
+  }
+  }
+  #help12::_webkit-scrollbar{
+    width:0;
+    
+
+
+}
+  
