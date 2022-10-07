@@ -408,6 +408,10 @@ a {
         text-align: left;
     }
 
+    #help9 {
+        margin-left: 350px;
+    }
+
     #socio {
         margin-top: 0%;
         /* margin-bottom: 15px; */
@@ -468,3 +472,5 @@ html {
     padding: 0px;
     overflow-x: hidden;
 }
+
+
