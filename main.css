@@ -285,7 +285,9 @@ a {
 
 
     }
-
+    .icon-box{
+        padding-bottom: 4px;
+    }
 
     #help {
         margin-top: 30px;
