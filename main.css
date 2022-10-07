@@ -443,3 +443,8 @@ html {
     padding: 0px;
     overflow-x: hidden;
 }
+
+.card {
+    margin: 2%;
+    margin-top: 2%;
+}
