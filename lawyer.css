@@ -19,7 +19,7 @@ a {
 .nav-link {
     color: #f9dbbd;
     font-size: large;
-    font-weight: 900;
+    /* font-weight: 900; */
 }
 
 .navbar-toggler-icon {
@@ -60,10 +60,11 @@ a {
 }
 body {
     color: #fff;
-    display: flex;
+    /* display: flex; */
     height: 100%;
     justify-content: center;
     align-items: center;
+    font-weight: 900;
 }
 
 
@@ -101,11 +102,12 @@ body {
 
 .container1 .heading {
     display: block;
-    font-size: 24px;
+    font-size: 30px;
     color: #333333;
     line-height: 1.2;
     text-align: center;
     padding-bottom: 36px;
+    text-decoration: underline;
 }
 
 .container1 form .card-details {
@@ -188,6 +190,7 @@ form .button {
     align-items: center;
     padding: 0 25px;
     transition: all 0.4s;
+    border-color: #fff;
 }
 
 .contact1-form-btn:hover {
@@ -237,5 +240,217 @@ card-details::_webkit-scrollbar {
 
 #nnnn {
     text-align: left;
-    margin-left: 15%;
+    margin-left: 1%;
+}
+
+
+.footer{
+    display: block;
+    font-size: 14px;
+    background-color: #f9dbbd;
+    padding: 50px 0;
+    /* margin-top: 10%; */
+    color: #450920;
+  }
+  
+  /* h4{
+    background-color: #f9dbbd;
+    color: #450920;
+    border-radius: 50%;
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+  
+  } */
+  
+  a{
+    color: #450920;
+  }
+  
+  .abhay {
+    margin-bottom: 6px;
+  }
+  
+  .logos
+  {
+      margin-right: 10px;
+  }
+  .fa-solid{
+      padding:3px;
+  }
+
+  
+/*[ Responsive ]*/
+
+#fpara{
+    color: #450920;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+#contactinfo{
+    font-size: 14px;
+    color: #450920;
+}
+
+
+#socio{
+    margin-top: 9px;
+}
+
+#abhay :hover{
+    text-decoration: underline;
+}
+
+#uselink {
+    text-align: left;
+    font-weight: 900;
+   }
+
+   #cus{
+    margin-bottom: 5px;
+    font-weight: 900;
+   }
+
+@media (max-width: 1200px) {
+    .contact1-pic {
+        width: 33.5%;
+    }
+
+    .contact1-form {
+        width: 44%;
+    }
+}
+
+@media (max-width: 992px) {
+    .wrap-contact1 {
+        padding: 110px 80px 157px 90px;
+    }
+
+    .contact1-pic {
+        width: 35%;
+    }
+
+    .contact1-form {
+        width: 55%;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrap-contact1 {
+        padding: 110px 80px 157px 80px;
+    }
+
+    .contact1-pic {
+        display: none;
+    }
+
+    .contact1-form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .wrap-contact1 {
+        padding: 110px 15px 157px 15px;
+    }
+}
+
+#fpara{
+    text-align: left;
+   }
+  
+  @media (max-width: 1200px) {
+     #fpara{
+      text-align: justify;
+     }
+  }
+  
+  @media (max-width: 992px) {
+  
+     #fpara{
+      text-align: justify;
+      /* margin-bottom: 0%; */
+     }
+     #uselink {
+      text-align: left;
+     }
+     #socio {
+      margin-top: 0%;
+      /* margin-bottom: 15px; */
+      justify-content: center;
+      /* margin-left: 220px; */
+     }
+     #cus{
+      justify-content: left;
+     }
+     #contactinfo{
+      text-align: center;
+      justify-content: left;
+      margin-bottom: 0%;
+     }
+  }
+  
+  @media (max-width: 768px) {
+      #fpara{
+          text-align: justify;
+          /* margin-bottom: 0%; */
+         }
+         #uselink {
+          text-align: left;
+         }
+         #socio {
+          margin-top: 0%;
+          /* margin-bottom: 15px; */
+          justify-content: left;
+          /* margin-left: 220px; */
+         }
+         #cus{
+          text-align: left;
+          justify-content: left;
+         }
+         #contactinfo{
+          margin-left: 20px;
+          text-align: left;
+          justify-content: left;
+          margin-bottom: 20px;
+         }
+  
+      
+  }
+  
+  @media (max-width: 576px) {
+      #fpara{
+          text-align: justify;
+          margin-left: 20px;
+          margin-right: 20px;
+  }
+  
+      #uselink{
+          margin-left: 5px;
+      }
+      #cus{
+          margin-left: 5px;
+      }
+  
+      #abhay{
+          margin-left: 5px;
+      }
+  }
+
+.a1 {
+   font-size: large;
+   line-height: 2;
+   margin-bottom: 50px;
+}
+
+.a2{
+    padding: 3px;
+    border-radius: 10%;
+    text-align: center;
+    background-color: pink;
+    color: #a62b5a ;
+    font-size: 20px;
+    font-weight: 600;
 }
