@@ -61,7 +61,7 @@
     <!-- COMPLAINT-FORM -->
     <div class="bg-contact1" style="background-image: url('images/bg-01.jpg');">
         <div class="container-contact1">
-            <div class="wrap-contact1">
+            <div class="wrap-contact1" id="help12">
                 <div class="contact1-pic js-tilt" data-tilt>
                     <img src="img-01.png" alt="IMG">
                 </div>
@@ -110,6 +110,25 @@
                             Send
                         </button>
                     </div>
+                    <button type="button" onclick="generate()" id="help14"> Generate id</button>
+                    <div class="box">
+                        your id is: <span id="otp"> </span>
+
+                    </div>
+                    <script>
+                        function generate() {
+                            var num = '1234567890';
+                            let OTP = '';
+
+                            for (let i = 0; i < 4; i++) {
+
+                                OTP += num[Math.floor(Math.random() * 10)];
+
+                            }
+
+                            document.getElementById('otp').innerHTML = OTP;
+                        }
+                    </script>
                 </form>
             </div>
         </div>
