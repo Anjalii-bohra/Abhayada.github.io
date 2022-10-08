@@ -35,8 +35,7 @@ const firebaseConfig = {
       document.querySelector(".alert").style.display = "none";
     }, 3000);
   
-    //   reset the form
-    document.getElementById("contactForm").reset();
+   
   }
   
   const saveMessages = (vempid, cname, cempid, msg) => {
