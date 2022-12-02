@@ -149,7 +149,20 @@
                                             </tr>
                                             <tr>
                                                 <th>Proof:</th>
-                                                <td><input type="url" id="homepage" name="homepage"></td>
+                                                <td><form method="post" enctype="multipart/form-data">
+                                                    <div>
+                                                      <label for="profile_pic">Choose file to upload</label>
+                                                      <input
+                                                        type="file"
+                                                        id="profile_pic"
+                                                        name="profile_pic"
+                                                        accept=".jpg, .jpeg, .png, .pdf, .docx" />
+                                                    </div>
+                                                    <div>
+                                                      <button style="padding: 5px; margin-left: 100px; margin-top: 10px; border-radius: 5px; border-width: 1px;">Submit</button>
+                                                    </div>
+                                                  </form></td>
+                                                
                                                 </tr>               
                                         </table>
                                 </div>
