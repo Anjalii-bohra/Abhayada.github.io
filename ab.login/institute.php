@@ -2,7 +2,7 @@
 $showAlert = false;
 $showError = false;
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    include 'partials/_dbconnect.php';
+    include '../utilities/_dbconnect.php';
     $username = $_POST["username"];
     $password = $_POST["password"];
     $cpassword = $_POST["cpassword"];
@@ -45,7 +45,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 
 <body>
-<?php require 'utilities\navbar.php' ?> 
+<?php require '..\utilities\navbar.php' ?> 
     <?php
     if($showAlert){
     echo ' <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -64,7 +64,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </div> ';
     }
     ?>
-    <form action="/codes/ab.login/institute.php" method="post">
+    <form action="institute.php" method="post">
         <h1>SIGN UP</h1>
         <section>
             <div class="form">
@@ -198,7 +198,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </form>
      <script src="main.js">
         </script>
-<?php require 'utilities\_footer.php' ?>
+<?php require '..\utilities\_footer.php' ?>
 </body>
 
 </html>
