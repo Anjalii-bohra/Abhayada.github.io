@@ -15,54 +15,15 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container-fluid ">
-           
-            <img src="logo.png" width="140" height="65" alt="">
-            <button id="nt" class="navbar-toggler" data-toggle="collapse" data-target="#weeh"
-                aria-label="Toggle navigation">
-                <span style="background-image: url('D:\HACKATHON2\home\toggler2')" class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="weeh">
-    
-                <div class="container justify-content-center">
-                    <div id="xyz" class="navbar-nav justify-content-between">
-                        <a class="nav-link" id="xyz" href="index.html">Home<span class="sr-only">(current)</span></a>
-                        <div class="dropdown">
-                            <button class="nav-link dropdown-toggle" type="button" id="xyz" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                Legal Resources
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="xyz" id="xyz">
-                               <a href="page (1).html"> <button class="dropdown-item" type="button">Laws and Awareness</button></a>
-                               <a href="legal-advice.html"> <button class="dropdown-item" type="button">Advocate Consultancy</button></a>
-                               <a href="lawyer.html"> <button class="dropdown-item" type="button">Advocate Sign-up</button></a>
-                            </div>
-                            
-                        </div>
-                        <a id="xyz" class="nav-link" href="Blogg.html">Blog</a>
-                        <a id="xyz" class="nav-link" href="dom.html">Domestic Violence</a>
-                        <a id="xyz" class="nav-link" href="#">About Us</a>
-                    </div>
-                </div>
-                <div class="button ml-auto">
-                    <a href="loginsub.html" id="abc" class="btn">Institute Log in</a>
-                    <!-- <button type="button" id="def" class="btn btn-secondary">Register</button> -->
-                </div>
-            </div>
-    </nav>
-    
-      <!-- ----------------- -->
-      <br>
-      <br>
-   
+   <!-- navbar  -->
+   <?php require 'navbar.php' ?>
     <!-- ----------------- -->
-    <!-- COMPLAINT-FORM -->
+    <!-- FORM -->
     <div class="bg-contact1" style="background-image: url('bg-01.jpg');">
         <div class="container-contact1">
             <div class="wrap-contact1">
                 <div class="contact1-pic js-tilt" data-tilt>
-                    <img src="@5.jpeg" alt="IMG">
+                    <img src="images\@5.jpeg" alt="IMG">
                 </div>
                 <form class="contact1-form validate-form" id="contactForm">
                     <span class="contact1-form-title">
@@ -77,32 +38,10 @@
                         </span>
                     </div>
 
-                    <!-- <div class="wrap-input1 validate-input" data-validate="Name is required">
-                        <input class="input1" type="text" name="name" placeholder="Culprit Name">
-                        <span class="focus-input1"></span>
-                        <span class="symbol-input1">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                        </span>
-                    </div>
-
-                    <div class="wrap-input1 validate-input" data-validate="ID is required">
-                        <input class="input1" type="text" name="name" placeholder="Culprit's Employee ID (OPTIONAL)">
-                        <span class="focus-input1"></span>
-                        <span class="symbol-input1">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                        </span>
-                    </div> -->
-
                     <div class="wrap-input1 validate-input" data-validate="Required!">
                         <textarea class="input1" id="message" name="message" placeholder="Share your story here!"></textarea>
                         <span class="focus-input1"></span>
                     </div>
-
-                    <!-- <div>
-                        <label>
-                            <input type="checkbox" name="Agreed"> I am sure about the Complaint
-                        </label>
-                    </div> -->
 
                     <div class="container-contact1-form-btn">
                         <button class="contact1-form-btn" type="submit">
@@ -113,10 +52,9 @@
             </div>
         </div>
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
-    <script src="./sh.js"></script>
-
+<!-- footer  -->
+<?php require '_footer.php' ?>    
+<script src="./sh.js"></script>
     <script src="tilt.jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
