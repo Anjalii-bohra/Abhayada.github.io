@@ -42,13 +42,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
     <link rel="stylesheet" href="in.css">
-    <script src="https://www.gstatic.com/firebasejs/9.10.0/firebase-app-compat.js"></script>
-    <script src= "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.10.0/firebase-auth-compat.js"></script>
 </head>
 
 <body>
-<?php //require 'partials/_navbar.php' ?> 
+<?php require 'utilities\navbar.php' ?> 
     <?php
     if($showAlert){
     echo ' <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -201,7 +198,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </form>
      <script src="main.js">
         </script>
-
+<?php require 'utilities\_footer.php' ?>
 </body>
 
 </html>
