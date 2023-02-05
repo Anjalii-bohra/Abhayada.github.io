@@ -2,13 +2,6 @@ body {
     background-color: #a62b5a;
     color: white;
     font-family: 'Roboto Slab', serif;
-    font-weight: 900;
-
-}
-
-/* navbar */
-#img1 {
-    border-radius: 10%;
 }
 
 a {
@@ -22,7 +15,6 @@ a {
     border-radius: 50px;
     transition: 0.3s;
     color: #450920;
-    /* box-shadow: 1px 2px 32px 19px rgba(288,288,288,0.15); */
 }
 
 .btn-complaint:hover {
@@ -124,14 +116,13 @@ h4 {
     color: #450920;
     border-radius: 50%;
     font-style: italic;
-    font-weight: 600;
     text-align: center;
 
 }
 
 #abtus {
     font-size: large;
-    font-weight: 100;
+    /* font-weight: 100; */
 }
 
 #crs img {
@@ -156,9 +147,6 @@ a {
 }
 
 #mission {
-    /* color:#f9; */
-    /* text-decoration: underline; */
-    font-weight: 900;
     font-size: large;
 }
 
@@ -170,11 +158,6 @@ a {
 .about {
     letter-spacing: 0.5px;
     line-height: 4vh;
-}
-
-h3 {
-    font-weight: 500;
-    /* text-decoration: underline; */
 }
 
 #nt {
@@ -198,7 +181,6 @@ a {
 .nav-link {
     color: #f9dbbd;
     font-size: large;
-    font-weight: 900;
 }
 
 .navbar-toggler-icon {
@@ -209,7 +191,6 @@ a {
     letter-spacing: 1px;
     border-radius: 10px;
     transition: 0.3s;
-    font-weight: 900;
     background-color: #a62b5a;
     color: #f9dbbd;
 }
@@ -230,13 +211,17 @@ a {
 
 }
 
+h5,
+h2 {
+    font-weight: 100;
+}
 
-.dropdown .dropdown-toggle {
+/* .dropdown .dropdown-toggle {
     border: none;
     font-size: large;
     background-color: #fff;
     font-weight: 900;
-}
+} */
 
 
 @media (max-width: 1200px) {
@@ -259,7 +244,7 @@ a {
 
     }
 
-    .icon-box{
+    .icon-box {
         padding-bottom: 4px;
     }
 
@@ -289,7 +274,8 @@ a {
 
 
     }
-    .icon-box{
+
+    .icon-box {
         padding-bottom: 4px;
     }
 
@@ -320,29 +306,18 @@ a {
         margin-left: 100px;
     }
 
-    /* h3 {
-            font-size: 60px;
-    
-        }
-    */
-
-    /* #mission {
-            font-size: 30px;
-    
-        } */
-
-        #help8{
-            align-content: center;
-            justify-content: center;
-            text-align: justify;
-            margin-right: 600px;
-            line-height: 2;
-            /* font-size: 33px; */
-            font-weight: 40;
-            /* width: 1000px; */
-            margin-left: 400px;
-            padding-left: 0%;
-        }
+    #help8 {
+        align-content: center;
+        justify-content: center;
+        text-align: justify;
+        margin-right: 600px;
+        line-height: 2;
+        /* font-size: 33px; */
+        font-weight: 40;
+        /* width: 1000px; */
+        margin-left: 400px;
+        padding-left: 0%;
+    }
 
     #mv {
         height: 60px;
@@ -396,9 +371,11 @@ a {
         width: 400px;
         /* padding-bottom: 400px; */
     }
-    .icon-box{
+
+    .icon-box {
         padding-bottom: 4px;
     }
+
     #fpara {
         text-align: justify;
         /* margin-bottom: 0%; */
@@ -430,7 +407,8 @@ a {
         justify-content: left;
         margin-bottom: 0%;
     }
-    #help8{
+
+    #help8 {
         align-content: center;
         justify-content: center;
         text-align: justify;
@@ -464,47 +442,58 @@ a {
     #abhay {
         margin-left: 5px;
     }
-    #help6{
+
+    #help6 {
         margin-right: 170px;
         /* margin-bottom: 200px; */
     }
-    #help4{
+
+    #help4 {
         margin-top: 45px;
     }
+
     .icon-boxes {
         margin-left: 80px;
         width: 250px;
         /* padding-bottom: 400px; */
     }
-    .icon-box{
+
+    .icon-box {
         padding-bottom: 4px;
-}
-    #help8{
+    }
+
+    #help8 {
         width: 350px;
     }
-    #help9{
+
+    #help9 {
         margin-left: 25px;
     }
 
-    #mv{
+    #mv {
         margin-left: 10px;
     }
-    #help10{
+
+    #help10 {
         margin-left: 10px;
         margin-right: 10px;
     }
-    .card{
+
+    .card {
         width: 80px;
         display: inline-block;
     }
-    #help11{
+
+    #help11 {
         font-size: medium;
     }
-    .btn-complaint{
-    padding: 15px;
+
+    .btn-complaint {
+        padding: 15px;
     }
 
 }
+
 @media (max-width: 523px) {
     #fpara {
         text-align: justify;
@@ -523,48 +512,59 @@ a {
     #abhay {
         margin-left: 5px;
     }
-    #help6{
+
+    #help6 {
         margin-right: 170px;
         /* margin-bottom: 200px; */
     }
-    #help4{
+
+    #help4 {
         margin-top: 45px;
     }
+
     .icon-boxes {
         margin-left: 80px;
         width: 250px;
         /* padding-bottom: 400px; */
     }
-    .icon-box{
+
+    .icon-box {
         padding-bottom: 4px;
-}
-    #help8{
+    }
+
+    #help8 {
         width: 350px;
     }
-    #help9{
+
+    #help9 {
         margin-left: 25px;
     }
 
-    #mv{
+    #mv {
         margin-left: 10px;
     }
-    #help10{
+
+    #help10 {
         margin-left: 10px;
         margin-right: 10px;
     }
-    .card{
+
+    .card {
         width: 80px;
         display: inline-block;
     }
-    #help11{
+
+    #help11 {
         font-size: medium;
     }
-    .btn-complaint{
-    padding: 8px;
+
+    .btn-complaint {
+        padding: 8px;
     }
 
 }
-@media (max-width: 509px){
+
+@media (max-width: 509px) {
     #fpara {
         text-align: justify;
         margin-left: 20px;
@@ -582,70 +582,83 @@ a {
     #abhay {
         margin-left: 5px;
     }
-    #help6{
+
+    #help6 {
         margin-right: 170px;
         /* margin-bottom: 200px; */
     }
-    #help4{
+
+    #help4 {
         margin-top: 45px;
     }
+
     .icon-boxes {
         margin-left: 80px;
         width: 250px;
         /* padding-bottom: 400px; */
     }
-    .icon-box{
+
+    .icon-box {
         padding-bottom: 4px;
-}
-    #help8{
+    }
+
+    #help8 {
         width: 350px;
     }
-    #help9{
+
+    #help9 {
         margin-left: 25px;
     }
 
-    #mv{
+    #mv {
         margin-left: 10px;
     }
-    #help10{
+
+    #help10 {
         margin-left: 10px;
         margin-right: 10px;
     }
-    .card{
+
+    .card {
         width: 80px;
         display: inline-block;
     }
-    #help11{
+
+    #help11 {
         font-size: medium;
     }
-    .btn-complaint{
-    /* width: 4px; */
-    /* height: 9px; */
-    font-size: small;
+
+    .btn-complaint {
+        /* width: 4px; */
+        /* height: 9px; */
+        font-size: small;
     }
-    #help4{
+
+    #help4 {
         width: 250px;
         height: 120px;
         margin-left: 20px;
         /* margin-bottom: 0px; */
     }
-    .moc{
+
+    .moc {
         font-size: 20px;
     }
-    .lead{
+
+    .lead {
         font-size: 15px;
- 
+
     }
-    #help7{
+
+    #help7 {
         margin-left: 120px;
 
     }
 }
+
 body,
 html {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
 }
-
-
