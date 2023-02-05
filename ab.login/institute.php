@@ -41,7 +41,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
-    <link rel="stylesheet" href="in.css">
+    
 </head>
 
 <body>
@@ -199,6 +199,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
      <script src="main.js">
         </script>
 <?php require '..\utilities\_footer.php' ?>
+<link rel="stylesheet" href="../in.css">
 </body>
 
 </html>
