@@ -17,16 +17,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     $description= $_POST["description"];
 
     //sql query
-    $sql = "INSERT INTO `lawyers` ( `full-name`, `email`, `contact`, `address`, `city`, `state`, `zipcode`) VALUES ('$pname','$email','$contact','$address','$city','$state','$zip');"; 
-   $ssql = "INSERT INTO `firms` (`date`, `email`, `web-address`, `category`, `description`) VALUES (current_timestamp(), '$femail', '$webaddress', '$list', '$description');";
-    // $mysqli->multi_query($sql);
-    // do {
-    //     if ($result = $mysqli->store_result()) {
-    //         var_dump($result->fetch_all(MYSQLI_ASSOC));
-    //         $result->free();
-    //     }
-    // } while ($mysqli->next_result());
-    $result = mysqli_query($conn, $sql, $ssql);
+    $sql = "INSERT INTO `lawyers` ( `full-name`, `email`, `contact`, `address`, `city`, `state`, `zipcode`, `firm-email`, `web-address`, `category`, `description`, `date`) VALUES ('$pname','$email','$contact','$address','$city','$state','$zip',  '$femail', '$webaddress', '$list', '$description', current_timestamp());";
+
+    $result = mysqli_query($conn, $sql);
     //checking
     if($result){
         $insert = true;
