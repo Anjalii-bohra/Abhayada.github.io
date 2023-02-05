@@ -10,7 +10,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
   $complaint = $_POST["complaint"];
   $ins = $_POST["ins"];
     //sql query
-    $sql=  " INSERT INTO `notes1` ( `vid`, `cname`, `cid`, `complaint`, `ins`) VALUES ('$vid', '$cname', '$cid', '$complaint', '$ins')";
+    
+    $sql=  " INSERT INTO `complaint` ( `institute`, `vid`, `cname`, `cid`, `message` ,`date`) VALUES ( '$ins','$vid', '$cname', '$cid', '$complaint', current_timestamp())";
     $result = mysqli_query($conn, $sql);
     //checking
     if($result){
@@ -55,7 +56,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                 <div class="contact1-pic js-tilt" data-tilt>
                     <img src="img-01.png" alt="IMG">
                 </div>
-                <form class="contact1-form validate-form" action="/CRUD/complaint.php" method="post">
+                <form class="contact1-form validate-form" action="complaint.php" method="post">
                     <span class="contact1-form-title">
                         COMPLAINT HERE
                     </span>
