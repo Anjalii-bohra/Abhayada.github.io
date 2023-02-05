@@ -1,65 +1,24 @@
 <?php
-
-//INSERT INTO `notes` (`sno`, `title`, `description`, `tstamp`) VALUES ('1', 'hello', 'abcdefg hijklmn opqrstu vwxyz', current_timestamp());
 $insert = false;
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "complaint";
 
-$conn = mysqli_connect($servername, $username, $password, $database);
-
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
-  $vid = $_POST["vid"];
+if($_SERVER['REQUEST_METHOD'] == 'POST')
+{
+    include 'utilities\_dbconnect.php';
+    $vid = $_POST["vid"];
   $cname = $_POST["cname"];
   $cid = $_POST["cid"];
   $complaint = $_POST["complaint"];
   $ins = $_POST["ins"];
-  
-  
-
-
-
-  //$sql = "INSERT INTO `notes1` (`title`, `description`) VALUES ('$title', '$description')";
-  $sql=  " INSERT INTO `notes1` ( `vid`, `cname`, `cid`, `complaint`, `ins`) VALUES ('$vid', '$cname', '$cid', '$complaint', '$ins')";
-  $result = mysqli_query($conn, $sql);
-
- if($result){
-     //echo "inserted !!!";
-     $insert = true;
- }
-
- else{
-  echo "error ----> " .mysqli_error($conn);
- }
-
-  
-
-
-  
+    //sql query
+    $sql=  " INSERT INTO `notes1` ( `vid`, `cname`, `cid`, `complaint`, `ins`) VALUES ('$vid', '$cname', '$cid', '$complaint', '$ins')";
+    $result = mysqli_query($conn, $sql);
+    //checking
+    if($result){
+        $insert = true;
+    }
+   
 }
-
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,53 +37,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 <body>
     <!-- NAV-BAR -->
-
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container-fluid ">
-            <img src="logo.png" width="140" height="65" alt="">
-            <button id="nt" class="navbar-toggler" data-toggle="collapse" data-target="#weeh"
-                aria-label="Toggle navigation">
-                <span style="background-image: url('D:\HACKATHON2\home\toggler2')" class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="weeh">
-
-                <div class="container justify-content-center">
-                    <div id="xyz" class="navbar-nav justify-content-between">
-                        <a class="nav-link" id="xyz" href="index.html">Home<span class="sr-only">(current)</span></a>
-                        <div class="dropdown">
-                            <button class="nav-link dropdown-toggle" type="button" id="xyz" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                Legal Resources
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="xyz" id="xyz">
-                                <a href="page (1).html"> <button class="dropdown-item" type="button">Laws and
-                                        Awareness</button></a>
-                                <a href="legal-advice.html"> <button class="dropdown-item" type="button">Advocate
-                                        Consultancy</button></a>
-                                <a href="lawyer.html"> <button class="dropdown-item" type="button">Advocate
-                                        Sign-up</button></a>
-                            </div>
-
-                        </div>
-                        <a id="xyz" class="nav-link" href="Blogg.html">Blog</a>
-                        <a id="xyz" class="nav-link" href="dom.html">Domestic Violence</a>
-                        <a id="xyz" class="nav-link" href="#">About Us</a>
-                    </div>
-                </div>
-                <div class="button ml-auto">
-                    <a href="loginsub.html" id="abc" class="btn">Institute Log in</a>
-                    <!-- <button type="button" id="def" class="btn btn-secondary">Register</button> -->
-                </div>
-            </div>
-    </nav>
-    <br>
-    <br>
-                               
-    <br>
-
-
+    <?php require 'utilities\navbar.php' ?> 
     <?php
-                                    if($insert){
+         if($insert){
                                            echo"<div class='alert alert-success alert-dismissible fade show' role='alert'>
                                               <strong>Success!</strong> Your record has been inserted successfully.
                                                <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
@@ -247,8 +162,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             }
         </script> -->
     </div>
+<!-- footer  -->
+<?php require 'utilities\_footer.php' ?> 
 
-    <script src="tilt.jquery.js"></script>
+<script src="tilt.jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
