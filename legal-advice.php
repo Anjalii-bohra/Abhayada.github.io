@@ -37,7 +37,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 
 <body>
      <!-- NAV-BAR -->
-     <?php require 'utilities/_nav.php' ?> 
+     <?php require 'utilities/navbar.php' ?> 
     <?php
     if($insert){
         echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
