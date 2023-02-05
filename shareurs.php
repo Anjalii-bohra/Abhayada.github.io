@@ -1,44 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>shareurs</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="su.css">
-    <meta name="robots" content="noindex, follow">
-</head>
-
-<body>
-
-    <!-- ----------------- -->
-    <br>
-    <br>
-    <?php
+<?php
      if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+        include 'utilities\_dbconnect.php';
         $name = $_POST['name'];
         $story = $_POST['story'];
-
-
- //connecting to database
-$servername = "localhost";
-$username = "root";
-$password ="";
-$database = "blog";
-
-//create a connection
-$conn = mysqli_connect($servername, $username, $password, $database);
-
-if(!$conn){
-    die("Sorry failed to connect". mysqli_connect_error());
-
-}
-else{
 
   $sql = " INSERT INTO `experience` (`name`, `story`) VALUES ('$name', '$story')";
   $result = mysqli_query($conn,$sql);
@@ -60,20 +24,34 @@ else{
     </button>
   </div>';
   }
-}
  }
- 
- 
  ?>
-    <!-- ----------------- -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>shareurs</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="su.css">
+    <meta name="robots" content="noindex, follow">
+</head>
+
+<body>
+<?php require 'utilities/navbar.php' ?> 
     <!-- COMPLAINT-FORM -->
     <div class="bg-contact1" style="background-image: url('bg-01.jpg');">
         <div class="container-contact1">
             <div class="wrap-contact1">
                 <div class="contact1-pic js-tilt" data-tilt>
-                    <img src="@5.jpeg" alt="IMG">
+                    <img src="images/@5.jpeg" alt="IMG">
                 </div>
-                <form class="contact1-form validate-form" id="contactForm" action="/blog/shareurs.php" method="post">
+                <form class="contact1-form validate-form" id="contactForm" action="shareurs.php" method="post">
                     <span class="contact1-form-title">
                         GO FOR IT!!
                     </span>
@@ -102,7 +80,7 @@ else{
             </div>
         </div>
     </div>
-
+    <?php require 'utilities\_footer.php' ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
     <script src="./sh.js"></script>
 
@@ -113,6 +91,7 @@ else{
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
     </script>
+  
 </body>
 
 </html>
