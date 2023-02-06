@@ -7,6 +7,7 @@ body {
     background-color: #a62b5a;
     color: #fff;
     font-family: 'Roboto Slab', serif;
+    font-weight: 900;
 }
 
 /* navbar */
@@ -99,7 +100,7 @@ p {
 
 
 h5 {
-    /* font-weight: 900; */
+    font-weight: 900;
     text-transform: uppercase;
     font-size: x-large;
 }
@@ -119,13 +120,13 @@ h4 {
     color: #450920;
     /* border-radius: 50%; */
     font-style: italic;
-    /* font-weight: 600; */
+    font-weight: 600;
     text-align: center;
 }
 
 #abtus {
     font-size: large;
-    /* font-weight: 100; */
+    font-weight: 100;
 }
 
 #crs img {
@@ -171,7 +172,7 @@ section::after {
 }
 
 h1 {
-    /* font-weight: 100%; */
+    font-weight: 100%;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -200,7 +201,7 @@ h1 {
     transition: all 0.25s;
 }
 
-/* #more {
+#more {
     display: none;
 }
 
@@ -286,13 +287,18 @@ h1 {
     background-color: #868585;
     color: #fff;
 
-} */
+}
 
 #grad {
     background-image: linear-gradient(to bottom right, #9c89b8, #f0a6ca);
 }
 
 /* navbar  */
+.navbar {
+    color: #f9dbbd;
+    background-color: white;
+
+}
 
 a {
     text-decoration: none;
@@ -300,10 +306,21 @@ a {
 
 }
 
+.nav-link {
+    color: #f9dbbd;
+    font-size: large;
+    font-weight: 900;
+}
+
+.navbar-toggler-icon {
+    color: #450920;
+}
+
 #abc {
     letter-spacing: 1px;
     border-radius: 10px;
     transition: 0.3s;
+    font-weight: 900;
     background-color: #a62b5a;
     color: #f9dbbd;
 }
@@ -329,15 +346,24 @@ a {
     border: none;
     font-size: large;
     background-color: #fff;
+    font-weight: 900;
 }
 
-
+.footer {
+    display: block;
+    font-size: 14px;
+    background-color: #f9dbbd;
+    padding: 50px 0;
+    /* margin-top: 10%; */
+    color: #450920;
+}
 
 h4 {
     background-color: #f9dbbd;
     color: #450920;
     border-radius: 50%;
     font-style: italic;
+    font-weight: 600;
     text-align: center;
 
 }
