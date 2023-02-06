@@ -23,7 +23,7 @@
             <div class="col-md-6 col-sm-10 col-xs-1 text-center" id="help5">
                 <h2 class="moc">Welcome to ABHAYADA</h2>
                 <p class="lead">Feel safe to register your complaints ANONYMOUSLY!</p>
-                <a href="ab\complaint.php" class="btn-complaint" style="text-decoration: none;">Register Complaint</a>
+                <a href="complaint.php" class="btn-complaint" style="text-decoration: none;">Register Complaint</a>
                 <br>
                 <br>
                 <br>
