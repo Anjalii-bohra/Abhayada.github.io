@@ -38,7 +38,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="su.css">
+    <link href="su.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <meta name="robots" content="noindex, follow">
 </head>
 
