@@ -6,13 +6,16 @@
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
     <title>Blog section</title>
 </head>
 
 <body>
-    <!-- navbar -->
-    <?php require '.\utilities\navbar.php' ?>
 
+    <!-- navbar  -->
+    <?php require 'utilities/navbar.php' ?>
+    <!-- ----------------- -->
+    <!-- top image -->
     <section class="fixed-background" data-type="slider-item">
         <!-- <h1>ABHAYADA</h1> -->
         <!-- <img src="l.png"> --><br>
@@ -22,8 +25,7 @@
     <a href="shareurs.php"><button class="btn2">Share
             Yours</button></a>
 
-    <?php include '.\utilities\_dbconnect.php'?>
-
+    <?php include 'utilities/_dbconnect.php';?>
     <!-- boxes -->
     <?php
     $sql = "SELECT * FROM `experience`";
@@ -45,16 +47,15 @@
     ?>
 
     <!-- footer -->
-    <?php require '.\utilities\_footer.php' ?>
-
-    <!-- <script src="Blo.js"></script> -->
+    <link rel="stylesheet" href="BB.css">
+    <?php require 'utilities\_footer.php' ?>
+    <script src="Blo.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" href="BB.css">
 </body>
 
 </html>
