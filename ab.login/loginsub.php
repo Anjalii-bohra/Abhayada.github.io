@@ -2,7 +2,7 @@
 $login = false;
 $showError = false;
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    include '..\utilities\_dbconnect.php';
+    include '../utilities/_dbconnect.php';
     $username = $_POST["username"];
     $password = $_POST["password"]; 
     
@@ -44,7 +44,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 </head>
 <body>
-<?php require '..\utilities\navbar.php' ?> 
+<?php require('..\utilities\navbar.php')?>
      <?php
     if($login){
     echo ' <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -80,7 +80,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     </div>
                     <div>
                         <!-- <h5>Email-id</h5> -->
-                        <input class="input" type="text" placeholder="E-mail id" name="username">
+                        <input class="input" type="text" placeholder="Username" name="username">
 
                     </div>
                 </div> 
@@ -103,10 +103,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         </div>
       </div>
-      <?php require '..\utilities\_footer.php' ?>
+
       <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-
-      <link rel="stylesheet" href="loginsub.css">
+<?php require('..\utilities\_footer.php')?>
+      <link rel="stylesheet" href="loginsub.css"> 
 </body>
 </html>
