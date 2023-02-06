@@ -6,11 +6,7 @@
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
 }
-.navbar {
-    color: #f9dbbd;
-    background-color: white;
 
-}
 
 a {
     text-decoration: none;
@@ -18,21 +14,11 @@ a {
 
 }
 
-.nav-link {
-    color: #f9dbbd;
-    font-size: large;
-    font-weight: 900;
-}
-
-.navbar-toggler-icon {
-    color: #450920;
-}
 
 #abc {
     letter-spacing: 1px;
     border-radius: 10px;
     transition: 0.3s;
-    font-weight: 900;
     background-color: #a62b5a;
     color: #f9dbbd;
 }
@@ -50,7 +36,7 @@ a {
     transition: 0.5s;
     color: #b74671;
     text-decoration: underline;
-   
+
 }
 
 
@@ -58,13 +44,14 @@ a {
     border: none;
     font-size: large;
     background-color: #fff;
-    font-weight: 900;
+    /* font-weight: 900; */
 }
+
 body,
 html {
     height: 100%;
     font-family: 'Roboto Slab', serif;
-    font-weight: 900;
+    /* font-weight: 900; */
 }
 
 /*---------------------------------------------*/
@@ -238,19 +225,6 @@ textarea.input1 {
 }
 
 
-/*[ Focus ]*/
-/* .focus-input1 {
-    display: block;
-    position: absolute;
-    border-radius: 25px;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0px 0px 0px 0px;
-    color: rgba(255, 165, 171, 0.5);
-} */
 
 .input1:focus+.focus-input1 {
     -webkit-animation: anim-shadow 0.5s ease-in-out forwards;
@@ -350,11 +324,6 @@ textarea.input1 {
 
 /* NAV-BAR */
 /* navbar  */
-.navbar {
-    color: #f9dbbd;
-    background-color: white;
-
-}
 
 a {
     text-decoration: none;
@@ -362,21 +331,10 @@ a {
 
 }
 
-.nav-link {
-    color: #f9dbbd;
-    font-size: large;
-    font-weight: 900;
-}
-
-.navbar-toggler-icon {
-    color: #450920;
-}
-
 #abc {
     letter-spacing: 1px;
     border-radius: 10px;
     transition: 0.3s;
-    font-weight: 900;
     background-color: #a62b5a;
     color: #f9dbbd;
 }
@@ -397,79 +355,71 @@ a {
 
 }
 
-
-.dropdown .dropdown-toggle {
-    border: none;
-    font-size: large;
-    background-color: #fff;
-    font-weight: 900;
-}
-
 /* ------------  */
 
-.footer{
+.footer {
     display: block;
     font-size: 14px;
     background-color: #f9dbbd;
     padding: 50px 0;
     /* margin-top: 10%; */
     color: #450920;
-  }
-  
-  h4{
+}
+
+h4 {
     background-color: #f9dbbd;
     color: #450920;
     border-radius: 50%;
     font-style: italic;
-    font-weight: 600;
+    /* font-weight: 600; */
     text-align: center;
-  
-  }
-  
-  a{
-    color: #450920;
-  }
-  
-  .abhay {
-    margin-bottom: 6px;
-  }
-  
-  .logos
-  {
-      margin-right: 10px;
-  }
-  .fa-solid{
-      padding:3px;
-  }
 
-  
+}
+
+a {
+    color: #450920;
+}
+
+.abhay {
+    margin-bottom: 6px;
+}
+
+.logos {
+    margin-right: 10px;
+}
+
+.fa-solid {
+    padding: 3px;
+}
+
+
 /*[ Responsive ]*/
 
-#fpara{
+#fpara {
     color: #450920;
 }
 
 
-#contactinfo{
+#contactinfo {
     color: #450920;
 }
 
 
-#socio{
+#socio {
     margin-top: 9px;
 }
 
-#abhay :hover{
+#abhay :hover {
     text-decoration: underline;
 }
 
 #uselink {
     text-align: left;
-   }
+}
 
-   #cus{
+#cus {
     margin-bottom: 5px;
-   }
+}
 
 @media (max-width: 1200px) {
     .contact1-pic {
@@ -515,84 +465,93 @@ a {
     }
 }
 
-#fpara{
+#fpara {
     text-align: left;
-   }
-  
-  @media (max-width: 1200px) {
-     #fpara{
-      text-align: justify;
-     }
-  }
-  
-  @media (max-width: 992px) {
-  
-     #fpara{
-      text-align: justify;
-      /* margin-bottom: 0%; */
-     }
-     #uselink {
-      text-align: left;
-     }
-     #socio {
-      margin-top: 0%;
-      /* margin-bottom: 15px; */
-      justify-content: center;
-      /* margin-left: 220px; */
-     }
-     #cus{
-      justify-content: left;
-     }
-     #contactinfo{
-      text-align: center;
-      justify-content: left;
-      margin-bottom: 0%;
-     }
-  }
-  
-  @media (max-width: 768px) {
-      #fpara{
-          text-align: justify;
-          /* margin-bottom: 0%; */
-         }
-         #uselink {
-          text-align: left;
-         }
-         #socio {
-          margin-top: 0%;
-          /* margin-bottom: 15px; */
-          justify-content: left;
-          /* margin-left: 220px; */
-         }
-         #cus{
-          text-align: left;
-          justify-content: left;
-         }
-         #contactinfo{
-          margin-left: 20px;
-          text-align: left;
-          justify-content: left;
-          margin-bottom: 20px;
-         }
-  
-      
-  }
-  
-  @media (max-width: 576px) {
-      #fpara{
-          text-align: justify;
-          margin-left: 20px;
-          margin-right: 20px;
-  }
-  
-      #uselink{
-          margin-left: 5px;
-      }
-      #cus{
-          margin-left: 5px;
-      }
-  
-      #abhay{
-          margin-left: 5px;
-      }
-  }
+}
+
+@media (max-width: 1200px) {
+    #fpara {
+        text-align: justify;
+    }
+}
+
+@media (max-width: 992px) {
+
+    #fpara {
+        text-align: justify;
+        /* margin-bottom: 0%; */
+    }
+
+    #uselink {
+        text-align: left;
+    }
+
+    #socio {
+        margin-top: 0%;
+        /* margin-bottom: 15px; */
+        justify-content: center;
+        /* margin-left: 220px; */
+    }
+
+    #cus {
+        justify-content: left;
+    }
+
+    #contactinfo {
+        text-align: center;
+        justify-content: left;
+        margin-bottom: 0%;
+    }
+}
+
+@media (max-width: 768px) {
+    #fpara {
+        text-align: justify;
+        /* margin-bottom: 0%; */
+    }
+
+    #uselink {
+        text-align: left;
+    }
+
+    #socio {
+        margin-top: 0%;
+        /* margin-bottom: 15px; */
+        justify-content: left;
+        /* margin-left: 220px; */
+    }
+
+    #cus {
+        text-align: left;
+        justify-content: left;
+    }
+
+    #contactinfo {
+        margin-left: 20px;
+        text-align: left;
+        justify-content: left;
+        margin-bottom: 20px;
+    }
+
+
+}
+
+@media (max-width: 576px) {
+    #fpara {
+        text-align: justify;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #uselink {
+        margin-left: 5px;
+    }
+
+    #cus {
+        margin-left: 5px;
+    }
+
+    #abhay {
+        margin-left: 5px;
+    }
+}
