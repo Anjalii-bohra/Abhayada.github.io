@@ -69,7 +69,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <section>
             <div class="form">
                 <div>
-                    <p> Already have an account? <a href="/codes/ab.login/loginsub.php"> Sign In</a></p>
+                    <p> Already have an account? <a href="loginsub.php"> Sign In</a></p>
                     <!-- <span> </span> -->
                 </div>
                 <!-- Email
