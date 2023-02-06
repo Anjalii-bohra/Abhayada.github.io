@@ -40,10 +40,10 @@
                                 Legal Resources
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Laws and Awareness</a>
-                                <a class="dropdown-item" href="#">Advocate Consultancy</a>
+                                <a class="dropdown-item" href="laws.php">Laws and Awareness</a>
+                                <a class="dropdown-item" href="legal-advice.php">Advocate Consultancy</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Advocate Sign Up</a>
+                                <a class="dropdown-item" href="lawyer.php">Advocate Sign Up</a>
                             </div>
                         </li>
                         <li class="nav-item">
