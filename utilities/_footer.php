@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row gy-4">
       <div class="col-lg-6 col-md-6 col-sm-12 footer-info">
-        <a href="index.html" class="logo d-flex align-items-center" id="abhay">
+        <a href="index.php" class="logo d-flex align-items-center" id="abhay">
           <span style="font-size: 1.7em;"><i style="color: black;">Abhayada</i></span>
         </a>
         <p id="fpara">It's easy to ignore when it's happening to others and almost easier to ignore when happening to
