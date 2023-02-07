@@ -14,16 +14,16 @@
         <h4 id="uselink">Useful Links</h4>
         <ul>
           <li>
-            <a href="index.html" style="color: black;">Home</a>
+            <a href="index.php" style="color: black;">Home</a>
           </li>
           <li>
-            <a href="page (1).html" style="color: black;">Laws and Awareness</a>
+            <a href="laws.php" style="color: black;">Laws and Awareness</a>
           </li>
           <li>
-            <a href="legal-advice.html" style="color: black;">Legal Consultancy</a>
+            <a href="legal-advice.php" style="color: black;">Legal Consultancy</a>
           </li>
           <li>
-            <a href="index.html" style="color: black;">About Us</a>
+            <a href="#" style="color: black;">About Us</a>
           </li>
         </ul>
       </div>
