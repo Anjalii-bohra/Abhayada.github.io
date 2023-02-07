@@ -63,7 +63,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </div> ';
     }
     ?>
-      <img class="wave" src="wave0.5.svg">
+      <!-- <img class="wave" src="wave0.5.svg"> -->
       <div class="container ">
         <div class="login">
             <img src="..\girl.svg">
