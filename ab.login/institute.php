@@ -1,12 +1,30 @@
 <?php
 $showAlert = false;
+$insert = false;
 $showError = false;
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     include '../utilities/_dbconnect.php';
     $username = $_POST["username"];
     $password = $_POST["password"];
     $cpassword = $_POST["cpassword"];
-    // $exists=false;
+
+    //details
+    // organisation
+    $Oname = $_POST["oname"];
+    $Oemail = $_POST["oemail"];
+    $Ocon = $_POST["ocontact"];
+    $address = $_POST["address"];
+    $city= $_POST["city"];
+    $state= $_POST["state"];
+    $zip= $_POST["zip"];
+// ceo 
+$CEOname = $_POST["ceoname"];
+$CEOmail = $_POST["ceomail"];
+$CEOcon = $_POST["ceocon"];
+// hr 
+$HRname = $_POST["hrname"];
+$HRmail = $_POST["hrmail"];
+$HRcon = $_POST["hrcon"];
 
     // Check whether this username exists
     $existSql = "SELECT * FROM `institute` WHERE username = '$username'";
@@ -20,10 +38,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // $exists = false; 
         if(($password == $cpassword)){
             $hash = password_hash($password, PASSWORD_DEFAULT);
-            $sql = "INSERT INTO `institute` ( `username`, `password`, `dt`) VALUES ('$username', '$hash', current_timestamp() )";
+           
+            $sql = "INSERT INTO `institute` (`Oname`, `HRcon`, `Oemail`, `Ocon`, `address`, `city`, `state`, `zip`, `CEOname`, `CEOmail`, `CEOcon`, `HRname`, `HRmail`, `username`, `password`, `dt`) VALUES ('$Oname', '$HRcon', '$Oemail', '$Ocon', '$address', '$city', '$state', '$zip', '$CEOname', '$CEOmail', '$CEOcon', '$HRname', '$HRmail','$username', '$hash', current_timestamp() )";
+           
+           
             $result = mysqli_query($conn, $sql);
             if ($result){
                 $showAlert = true;
+                $insert = true;
             }
         }
         else{
@@ -47,6 +69,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <body>
 <?php require '..\utilities\navbar.php' ?> 
     <?php
+    if($insert){
+        echo"<div class='alert alert-success alert-dismissible fade show' role='alert'>
+           <strong>Success!</strong> Your record has been inserted successfully.
+            <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+             <span aria-hidden='true'>&times;</span>
+               </button>
+                </div>";
+             }
     if($showAlert){
     echo ' <div class="alert alert-success alert-dismissible fade show" role="alert">
         <strong>Success!</strong> Your account is now created and you can login
@@ -72,18 +102,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <p> Already have an account? <a href="loginsub.php"> Sign In</a></p>
                     <!-- <span> </span> -->
                 </div>
-                <!-- Email
-                <div class="email">
-                    <label for="email"> Email</label>
-                    <input type="email" name="email" id="email" placeholder="Email">
-                </div>
-
-                password
-                <div class="pass">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Password">
-
-                </div> -->
                 <h2>Organization</h2>
                 <br>
                 <div class="input-group card-box">
@@ -103,7 +121,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <br>
                 <div class="input-group card-box">
                     <span class="details"><b>Address</b></span>
-                    <textarea id="address" name="address" rows="8" cols="80" placeholder="Address" name="oadd"></textarea>
+                    <textarea id="address" name="address" rows="8" cols="80" placeholder="Address" ></textarea>
                 </div>
                 <br>
                 <div class="input-group card-box">
@@ -127,17 +145,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <br>
                 <div class="input-group card-box">
                     <span class="details"><b>Full Name</b></span>
-                    <input type="text" id="name2" placeholder="Enter your name">
+                    <input type="text" id="name2" name="ceoname"placeholder="Enter your name">
                 </div>
                 <br>
                 <div class="input-group card-box">
                     <span class="details"><b>Email</b></span>
-                    <input type="email" id="email2" placeholder="Enter your email">
+                    <input type="email" id="email2" name="ceomail" placeholder="Enter your email">
                 </div>
                 <br>
                 <div class="input-group card-box">
                     <span class="details"><b>Contact</b></span>
-                    <input type="number" id="number2" placeholder="Enter your number">
+                    <input type="number" id="number2" name="ceocon" placeholder="Enter your number">
                 </div>
             </div>
             <br><br>
@@ -146,24 +164,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <br>
                 <div class="input-group card-box">
                     <span class="details"><b>Full Name</b></span>
-                    <input type="text" id="name3" placeholder="Enter your name">
+                    <input type="text" id="name3" name="hrname" placeholder="Enter your name">
                 </div>
                 <br>
                 <div class="input-group card-box">
                     <span class="details"><b>Email</b></span>
-                    <input type="email" name="email" id="email" placeholder="Enter your email">
+                    <input type="email"name="hrmail" id="email" placeholder="Enter your email">
                     <br>
-                    <div class="alert alert-success alert-dismissible fade show  mt-2" role="alert" id="alert">
-                        <div>This Email will be your institute's Log-in id</div>
+                    <!-- <div class="alert alert-success alert-dismissible fade show  mt-2" role="alert" id="alert">
+                         <div>This Email will be your institute's Log-in id</div> 
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                    </div>
+                    </div> -->
                 </div>
                 <br>
                 <div class="input-group card-box">
                     <span class="details"><b>Contact</b></span>
-                    <input type="number" id="number3" placeholder="Enter your number">
+                    <input type="number" id="number3" name="hrcon" placeholder="Enter your number">
                 </div>
 
                 <br>
