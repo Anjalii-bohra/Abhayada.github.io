@@ -251,10 +251,10 @@ a {
     color: red;
 }
 
-p,
+/* p,
 ul {
-    /* color: #5e5e5e; */
-}
+    color: #5e5e5e; 
+} */
 .footer{
 background-color: #f9dbbd;
 padding: 20px;
