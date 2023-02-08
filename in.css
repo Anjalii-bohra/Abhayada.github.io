@@ -3,8 +3,8 @@ body {
 }
 
 form {
-    height: 1250px;
-    width: 700px;
+    height: 1700px;
+    width: 800px;
     background-color: #fff;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -14,9 +14,10 @@ form {
     backdrop-filter: blur(50px);
     border: 2px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 60px rgba(8, 7, 16, 0.6);
-    padding: 50px 35px;
-    margin-top: 5%;
-    margin-bottom: 30%;
+    padding-bottom: 900px;
+    padding-right: 50px;
+    margin-top: 330px;
+    margin-bottom: 300px;
 }
 
 .form {
@@ -30,12 +31,12 @@ form {
 }
 
 h1 {
-    color: #a62b5a;
+    color: #450920;
     justify-content: center;
     align-items: center;
-    margin-left: 290px;
+    margin-left: 330px;
     font-size: 35px;
-    margin-top: 10px;
+    margin-top: 20px;
     text-decoration: underline;
 }
 
@@ -48,9 +49,10 @@ section {
     font-size: 17px;
 }
 
+/* 
 .pass {
     margin-top: 20px;
-}
+} */
 
 #submit-btn {
     margin-top: 20px;
@@ -110,8 +112,8 @@ section {
     margin-left: 30px;
 }
 
-#pass2 {
-    margin-left: 300px;
+#pass {
+    margin-left: 10px;
 }
 
 #submit-btn {
@@ -122,4 +124,12 @@ section {
     padding: 0.5em 1.5em;
     border-radius: 10px;
     font-size: medium;
+}
+
+.footer {
+    background-color: #f9dbbd;
+}
+
+.foot {
+    margin-top: 1800px;
 }
