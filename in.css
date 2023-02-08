@@ -127,9 +127,15 @@ section {
 }
 
 .footer {
+    padding: 20px;
+    ;
     background-color: #f9dbbd;
 }
 
 .foot {
     margin-top: 1800px;
+}
+
+.logos {
+    margin-right: 13px;
 }
