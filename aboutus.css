@@ -35,7 +35,8 @@
     float: right;
     width: 40%;
     margin-top: 50px;
-    margin-right: 20px;
+    margin-right: 1px;
+
 }
 
 .image-section img {
@@ -89,6 +90,7 @@
     line-height: 1.5;
 }
 
+
 .title {
     text-align: center;
     padding: 20px;
@@ -116,4 +118,8 @@
 
 /* #content1 {
     margin-right: 50px;
+    ;
 } */
+#vision {
+    margin-left: 100px;
+}
