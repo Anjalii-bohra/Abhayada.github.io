@@ -31,8 +31,8 @@
     </section>
     <div class="section">
         <div class="container">
-            <div class="content-section">
-                <div class="content">
+            <div class="content-section" id="content1">
+                <div class="content" >
                     <h2>Abhayada</h2>
                     <p>Abhayada is a great platform for women to stand up for themselves and encourage others for the
                         same. The complaint system is quite easy and exclusive so don't think twice before registering
