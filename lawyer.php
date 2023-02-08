@@ -34,13 +34,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-        <!-- <link href="lawyer.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" /> -->
+        <link href="lawyer.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <title>Lawyer-form</title>
 </head>
 
 <body>
         <!-- NAV-BAR -->
-        <?php //require 'utilities\navbar.php' ?> 
+        <?php require 'utilities\navbar.php' ?> 
     <?php
     if($insert){
         echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
