@@ -1,12 +1,13 @@
 <?php
 $login = false;
 $showError = false;
+echo $_SERVER["REQUEST_METHOD"];
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     include '../utilities/_dbconnect.php';
     $username = $_POST["username"];
     $password = $_POST["password"]; 
     
-    $sql = "Select * from institute where username='$username'";
+    $sql = "Select * from `user` where username='$username'";
     $result = mysqli_query($conn, $sql);
     $num = mysqli_num_rows($result);
     if ($num == 1) {
@@ -44,7 +45,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 </head>
 <body>
-<?php require('..\utilities\navbar.php')?>
+<?php //require('..\utilities\navbar.php')?>
      <?php
     if($login){
     echo ' <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -66,7 +67,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <!-- <img class="wave" src="wave0.5.svg"> -->
       <div class="container ">
         <div class="login">
-            <img src="..\girl.svg">
+            <!-- <img src="..\girl.svg"> -->
         </div>
         <div class="login-container">
             <form action="loginsub.php" method="post">
@@ -106,7 +107,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
       <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-<?php require('..\utilities\_footer.php')?>
+<?php require('utilities\_footer.php')?>
       <link rel="stylesheet" href="loginsub.css"> 
 </body>
 </html>
