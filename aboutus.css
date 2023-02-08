@@ -24,9 +24,10 @@
 .content-section {
     float: left;
     width: 55%;
-    margin-left: 20px;
+    margin-left: 2px;
     margin-top: 20px;
     color: #fff;
+
 
 }
 
@@ -42,6 +43,10 @@
     height: auto;
 
 }
+
+/* .content-section .content {
+    margin-right: 100px;
+} */
 
 .content-section.title {
     text-transform: uppercase;
@@ -108,3 +113,7 @@
 .logos {
     margin-right: 10px;
 }
+
+/* #content1 {
+    margin-right: 50px;
+} */
