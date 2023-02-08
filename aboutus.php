@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <?php require 'utilities\navbar.php' ?>
     <!-- <section class="innerbanner">
         <div class="container">
 
@@ -26,7 +27,7 @@
         </div>
     </section> -->
     <section class="title">
-          <h1>About Us</h1>
+        <h1>About Us</h1>
     </section>
     <div class="section">
         <div class="container">
@@ -44,7 +45,7 @@
                         ALONE IN THIS.</p>
                 </div>
             </div>
-            <div class="image-section" >
+            <div class="image-section">
                 <img src="https://tse2.mm.bing.net/th?id=OIP.CYcWlVjkS-mCBDlv_Zl0KAHaHB&pid=Api&P=0">
             </div>
 
@@ -65,12 +66,13 @@
                 <div class="content">
                     <h2>Our Mission</h2>
                     <p>To strive towards enabling women to achieve equality and equal participation in the
-                    workplace and
-                    outside. And thus providing them a convenient way of tackling harassment.</p>
+                        workplace and
+                        outside. And thus providing them a convenient way of tackling harassment.</p>
                 </div>
             </div>
         </div>
     </div>
 </body>
+<?php require 'utilities\_footer.php' ?>
 
 </html>
