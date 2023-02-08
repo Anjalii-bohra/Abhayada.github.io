@@ -63,11 +63,11 @@ $HRcon = $_POST["hrcon"];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
-    
+
 </head>
 
 <body>
-<?php require '..\utilities\navbar.php' ?> 
+    <?php require '..\utilities\navbar.php' ?>
     <?php
     if($insert){
         echo"<div class='alert alert-success alert-dismissible fade show' role='alert'>
@@ -121,7 +121,7 @@ $HRcon = $_POST["hrcon"];
                 <br>
                 <div class="input-group card-box">
                     <span class="details"><b>Address</b></span>
-                    <textarea id="address" name="address" rows="8" cols="80" placeholder="Address" ></textarea>
+                    <textarea id="address" name="address" rows="8" cols="80" placeholder="Address"></textarea>
                 </div>
                 <br>
                 <div class="input-group card-box">
@@ -145,7 +145,7 @@ $HRcon = $_POST["hrcon"];
                 <br>
                 <div class="input-group card-box">
                     <span class="details"><b>Full Name</b></span>
-                    <input type="text" id="name2" name="ceoname"placeholder="Enter your name">
+                    <input type="text" id="name2" name="ceoname" placeholder="Enter your name">
                 </div>
                 <br>
                 <div class="input-group card-box">
@@ -169,7 +169,7 @@ $HRcon = $_POST["hrcon"];
                 <br>
                 <div class="input-group card-box">
                     <span class="details"><b>Email</b></span>
-                    <input type="email"name="hrmail" id="email" placeholder="Enter your email">
+                    <input type="email" name="hrmail" id="email" placeholder="Enter your email">
                     <br>
                     <!-- <div class="alert alert-success alert-dismissible fade show  mt-2" role="alert" id="alert">
                          <div>This Email will be your institute's Log-in id</div> 
@@ -185,49 +185,51 @@ $HRcon = $_POST["hrcon"];
                 </div>
 
                 <br>
-            </div>    
+            </div>
             <div class="form">
                 <h2>Credentials</h2>
-                <br>    
+                <br>
                 <div class="input-group card-box">
                     <span class="details"><b>Username</b></span>
-                    <input type="text" class="pass" name="username" id="password" placeholder="Enter username" minlength="8">
+                    <input type="text" class="pass" name="username" id="password" placeholder="Enter username"
+                        minlength="8">
                 </div>
                 <br>
                 <div class="input-group card-box">
                     <span class="details"><b>Password (Minimum 8 Characters)</b></span>
-                    <input type="password" id="pass" name="password" id="password" placeholder="Create a password" minlength="8">
+                    <input type="password" id="pass" name="password" id="password" placeholder="Create a password"
+                        minlength="8">
                 </div>
                 <br>
                 <div class="input-group card-box">
-                <span class="details"><b>Confirm Password (Minimum 8 Characters)</b></span>
-                    <input type="password" id="pass" placeholder="Re-enter password" name="cpassword" >
+                    <span class="details"><b>Confirm Password (Minimum 8 Characters)</b></span>
+                    <input type="password" id="pass" placeholder="Re-enter password" name="cpassword">
                 </div>
-            </div>    
+            </div>
             </div>
             </div>
             </div>
             <!-- sign up button-->
-            <button id="submit-btn" >Sign up</button>
+            <button id="submit-btn">Sign up</button>
             <!--sign in option-->
 
             </div>
         </section>
     </form>
 
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
-        crossorigin="anonymous"></script>
-       <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-        <link href="in.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <link href="in.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <section class="foot">
         <div>
-<?php require '..\utilities\_footer.php' ?>
-</div>
-</section>
+            <?php require '..\utilities\_footer.php' ?>
+        </div>
+    </section>
 </body>
 
 </html>
