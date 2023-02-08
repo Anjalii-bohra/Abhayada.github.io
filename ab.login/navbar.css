@@ -1,0 +1,26 @@
+html,
+head,
+body {
+    font-family: 'Roboto Slab', serif !important;
+}
+
+nav ul li a {
+    color: #450920 !important;
+    /* font-weight: 600 */
+    font-size: large;
+}
+
+.insloginbtn {
+    background-color: #a62b5a !important;
+    color: white !important;
+}
+
+.insloginbtn a {
+    color: white;
+}
+
+/* @media(min-width: 991px) {
+    .insloginbtn {
+        display: block !important;
+    }
+} */
