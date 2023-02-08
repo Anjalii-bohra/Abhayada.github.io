@@ -94,8 +94,8 @@ $HRcon = $_POST["hrcon"];
     </div> ';
     }
     ?>
-    <form action="institute.php" method="post">
-        <h1>SIGN UP</h1>
+    <form action="institute.php" method="post" class="main">
+        <h1><strong>SIGN UP</strong></h1>
         <section>
             <div class="form">
                 <div>
@@ -187,7 +187,7 @@ $HRcon = $_POST["hrcon"];
                 <br>
             </div>    
             <div class="form">
-                <h2>credentials</h2>
+                <h2>Credentials</h2>
                 <br>    
                 <div class="input-group card-box">
                     <span class="details"><b>Username</b></span>
@@ -196,12 +196,12 @@ $HRcon = $_POST["hrcon"];
                 <br>
                 <div class="input-group card-box">
                     <span class="details"><b>Password (Minimum 8 Characters)</b></span>
-                    <input type="password" class="pass" name="password" id="password" placeholder="Create a password" minlength="8">
+                    <input type="password" id="pass" name="password" id="password" placeholder="Create a password" minlength="8">
                 </div>
                 <br>
                 <div class="input-group card-box">
                 <span class="details"><b>Confirm Password (Minimum 8 Characters)</b></span>
-                    <input type="password" id="pass1" placeholder="Re-enter password" name="cpassword" >
+                    <input type="password" id="pass" placeholder="Re-enter password" name="cpassword" >
                 </div>
             </div>    
             </div>
@@ -214,10 +214,20 @@ $HRcon = $_POST["hrcon"];
             </div>
         </section>
     </form>
-     <script src="main.js">
-        </script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+        <link href="in.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <section class="foot">
+        <div>
 <?php require '..\utilities\_footer.php' ?>
-<link rel="stylesheet" href="../in.css">
+</div>
+</section>
 </body>
 
 </html>
