@@ -46,8 +46,12 @@
                                 <a class="dropdown-item" href="lawyer.php">Advocate Sign Up</a>
                             </div>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php">About Us</a>
+                            <a class="nav-link" href="aboutus.php">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="feedback.php">Feedback</a>
                         </li>
                     </ul>
                 </div>
