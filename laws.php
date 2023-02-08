@@ -19,9 +19,9 @@
     <?php require 'utilities/navbar.php' ?>
     <div class="section">
         <div class="title">
-            <h1>Laws For Women</h1>
+            <h1 style="color: white; padding: 20px;">Laws For Women</h1>
         </div>
-        <div class="services">
+        <!-- <div class="services">
             <div class="card" id="n1">
                 <div class="icon">
                     <i class="fas fa-book"></i>
@@ -63,8 +63,150 @@
 
             </div>
 
+
+        </div> -->
+        <div class="container">
+            <div class="card-columns">
+                <a href="pdfs\SexualHarassmentofWomenatWorkPlaceAct2013_0.pdf">
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <!-- <img src="..." class="card-img-top" alt="..."> -->
+                        <div class="card-body">
+                            <h5 class="card-title">Sexual Harassment of Women at Workplace Act, 2013</h5>
+                            <p class="card-text">An Act to provide protection against sexual harassment of women at
+                                workplace and for
+                                the prevention and redressal of complaints of sexual harassment and for matters sexual
+                                harassment
+                                results in violation of the fundamental rights of a woman to equality
+                                under articles 14 and 15 of the Constitution of India</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="pdfs\TheIndecentRepresentationofWomenProhibitionAct1986_2.pdf">
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <!-- <img src="..." class="card-img-top" alt="..."> -->
+                        <div class="card-body">
+                            <h5 class="card-title">The Indecent Reprecentation of Women Act, 1986</h5>
+                            <p class="card-text">It is an Act of
+                                the Parliament of India
+                                which was enacted to prohibit indecent representation of women through web series,
+                                advertisement or in writings, paintings or in any other manner.</ </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="pdfs\TheCommissionofSatiPreventionAct1987-of1988_0.pdf">
+                    <div class="card text-center p-3">
+                        <div class="icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <blockquote class="blockquote mb-0">
+                            <h5>The Commision of Sati (Prevention) Act, 1987</h5>
+                            <p>An Act to provide for the more effective prevention of the commission of sati and its
+                                glorification and for matters connected therewith or incidental thereto</p>
+                        </blockquote>
+                    </div>
+                </a>
+                <a href="pdfs\THEINDIANPENALCODE1860_0.pdf">
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h5>The Indian Penal Code</h5>
+                        <p>Comprehensive code intended to cover all substantive aspects of criminal law.</p>
+                        <!-- <img src="..." class="card-img" alt="..."> -->
+                    </div>
+                </a>
+                <a href="pdfs\THEIMMORALTRAFFIC(PREVENTION)ACT1956_2.pdf">
+                    <div class="card text-center">
+                        <div class="icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">The Immoral Traffic (Prevention) Act, 1956</h5>
+                            <p class="card-text">An Act to provide in pursuance of the International Convention signed
+                                at
+                                New York on the 9th
+                                day of May, 1950, for the prevention of immoral traffic</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="pdfs\The_Criminal_Law_Amendment_Act_2013_0.pdf">
+                    <div class="card p-3">
+                        <div class="icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <blockquote class="blockquote mb-0 card-body">
+                            <h5>The Criminal Law (Amendment) Act,2013</h5>
+
+                            <p>The Criminal Law (Amendment) Act, 2013 is an Indian legislation passed by the Lok Sabha
+                                on 19
+                                March
+                                2013, and by
+                                the Rajya Sabha on 21 March 2013, which provides for amendment Indian Penal Code, Indian
+                                Evidence
+                                Act, and Code of Criminal Procedure, 1973 on laws related to
+                                sexual offences.</p>
+                        </blockquote>
+                    </div>
+                </a>
+                <a href="pdfs\TheProtectionofWomenfromDomesticViolenceAct2005_0.pdf">
+                    <div class="card p-3 text-right">
+                        <div class="icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <blockquote class="blockquote mb-0">
+                            <h5>The Protection of Women from Domestic Violence Act,2005</h5>
+                            <!-- <p>A well-known quote, contained in a blockquote element.</p> -->
+                            <!-- <footer class="blockquote-footer">
+                            <small class="text-muted">
+                                Someone famous in <cite title="Source Title">Source Title</cite>
+                            </small>
+                        </footer> -->
+                        </blockquote>
+                    </div>
+                </a>
+                <a href="pdfs\THEDOWRYPROHIBITIONACT1961_0.pdf">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <h5 class="card-title">The Dowry Prohibition Act,1961</h5>
+                            <p class="card-text">
+
+                                An Act to prohibit the giving or taking of dowry.</p>
+                            <!-- <p class="card-text"><small class="text-muted">ACT NO. 28 OF 1961</small></p> -->
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
+    <div class="fluid-container campaigns-outer">
+        <div class=" container" style="margin-top: 50px; margin-bottom: 50px;">
+            <h1 class="campaigns">Campaigns</h1>
+            <iframe width="350" height="350" src="https://www.youtube.com/embed/faq3CwJfdIY" style="margin-right: 13px;"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <iframe width="350" height="350" src="https://www.youtube.com/embed/fA6PblYFztk" style="margin-right: 13px;"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <iframe width="350" height="350" src="https://www.youtube.com/embed/u8-stLxYJI0" style="margin-right: 13px;"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+    </div>
+
     <div class="container">
         <main>
 
@@ -386,13 +528,13 @@
     </div>
     <?php require 'utilities\_footer.php' ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
-        crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-        <script src="tilt.jquery.js"></script>
-        <link rel="stylesheet" href="L&A.css">
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="tilt.jquery.js"></script>
+    <link href="L&A.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
 </body>
 

@@ -32,20 +32,7 @@ div {
     margin-right: -15px;
 }
 
-/* 
 
-@media (min-width: 992px){
-.container {
-    max-width: 960px;
-}}
-@media (min-width: 768px){
-.container {
-    max-width: 720px;
-}}
-@media (min-width: 576px){
-.container {
-    max-width: 540px;
-}} */
 .container {
     width: 100%;
     padding-right: 10px;
@@ -670,10 +657,6 @@ section {
     margin-left: 10px;
 }
 
-/* ------------------------------------------------------------------ */
-/* body {
-    background-color: #a62b5a;
-} */
 
 #title {
     text-align: center;
@@ -694,4 +677,20 @@ section {
 
 #feed2 {
     padding: 4em;
+}
+
+.footer {
+    background-color: #f9dbbd;
+    margin-right: 0;
+    margin-left: 0;
+    padding-top: 20px;
+}
+
+.logos {
+    margin-right: 10px;
+}
+
+.social-links {
+    align-items: center;
+    justify-content: center;
 }
