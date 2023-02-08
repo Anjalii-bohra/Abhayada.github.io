@@ -31,8 +31,8 @@
     </section>
     <div class="section">
         <div class="container">
-            <div class="content-section">
-                <div class="content">
+            <div class="content-section" id="content1">
+                <div class="content" >
                     <h2>Abhayada</h2>
                     <p>Abhayada is a great platform for women to stand up for themselves and encourage others for the
                         same. The complaint system is quite easy and exclusive so don't think twice before registering
@@ -53,11 +53,14 @@
     </div>
     <div class="container-fluid" id="vision">
         <h2 id="vision1">Our Vision</h2>
-        <p> To promote women's rights,which includes the right to safety of women and girls.</p>
-        <p id="vision3">To withhold women's dignity and self-respect irrespective of their social status for a secure
+        <p> To promote women's rights,which includes the right to safety of women and girls.To withhold women's dignity and self-respect irrespective of their social status for a secure
             and
             relatively
             much more ethical workplace.</p>
+        <!-- <p id="vision3">To withhold women's dignity and self-respect irrespective of their social status for a secure
+            and
+            relatively
+            much more ethical workplace.</p> -->
 
     </div>
     <div class="section2">

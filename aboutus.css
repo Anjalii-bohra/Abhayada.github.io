@@ -24,9 +24,10 @@
 .content-section {
     float: left;
     width: 55%;
-    margin-left: 20px;
+    margin-left: 2px;
     margin-top: 20px;
     color: #fff;
+
 
 }
 
@@ -34,7 +35,8 @@
     float: right;
     width: 40%;
     margin-top: 50px;
-    margin-right: 20px;
+    margin-right: 1px;
+
 }
 
 .image-section img {
@@ -42,6 +44,10 @@
     height: auto;
 
 }
+
+/* .content-section .content {
+    margin-right: 100px;
+} */
 
 .content-section.title {
     text-transform: uppercase;
@@ -84,6 +90,7 @@
     line-height: 1.5;
 }
 
+
 .title {
     text-align: center;
     padding: 20px;
@@ -107,4 +114,12 @@
 
 .logos {
     margin-right: 10px;
+}
+
+/* #content1 {
+    margin-right: 50px;
+    ;
+} */
+#vision {
+    margin-left: 100px;
 }
