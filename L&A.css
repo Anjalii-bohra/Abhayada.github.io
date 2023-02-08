@@ -13,7 +13,7 @@ body {
     text-align: center;
     padding-top: 50px;
     font-size: 42px;
-    margin-top: 80px;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
@@ -240,6 +240,7 @@ hr {
 #n5 {
     align-content: center;
     text-align: center;
+    color: white;
 }
 
 html {
@@ -262,4 +263,20 @@ ul {
 
 .logos {
     margin-right: 10px;
+}
+
+.campaigns {
+    color: #42051c;
+    text-align: center;
+    margin: 20px;
+    padding-bottom: 20px;
+}
+
+.campaigns-outer {
+    background-color: #f9dbbd;
+    padding: 15px;
+    margin-bottom: 30px;
+    padding-top: 5px;
+    margin-top: 150px;
+
 }
