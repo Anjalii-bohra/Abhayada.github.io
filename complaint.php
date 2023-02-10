@@ -1,23 +1,29 @@
 <?php
 $insert = false;
 
-if($_SERVER['REQUEST_METHOD'] == 'POST')
-{
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     include 'utilities\_dbconnect.php';
+    $vname = $_POST["vname"];
     $vid = $_POST["vid"];
-  $cname = $_POST["cname"];
-  $cid = $_POST["cid"];
-  $complaint = $_POST["complaint"];
-  $ins = $_POST["ins"];
+    $vno = $_POST["vno"];
+    $vemail = $_POST["vemail"];
+    $cname = $_POST["cname"];
+    $cid = $_POST["cid"];
+    $complaint = $_POST["complaint"];
+    $org = $_POST["org"];
+    $orgtype = $_POST["orgtype"];
+    $vdepartment = $_POST["vdepartment"];
+
+
     //sql query
-    
-    $sql=  " INSERT INTO `complaint` ( `institute`, `vid`, `cname`, `cid`, `message` ,`date`) VALUES ( '$ins','$vid', '$cname', '$cid', '$complaint', current_timestamp())";
+
+    $sql = " INSERT INTO `complaint` ( `vname`, `vid`, `vno`,`vemail`, `cname`, `cid`, `complaint` ,`org`, `orgtype`,`vdepartment`, `date`) VALUES ( '$vname','$vid','$vno','$vemail', '$cname', '$cid', '$complaint','$org','$orgtype','$vdepartment', current_timestamp())";
     $result = mysqli_query($conn, $sql);
     //checking
-    if($result){
+    if ($result) {
         $insert = true;
     }
-   
+
 }
 ?>
 <!DOCTYPE html>
@@ -35,17 +41,17 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 
 <body>
     <!-- NAV-BAR -->
-    <?php require 'utilities\navbar.php' ?> 
+    <?php require 'utilities\navbar.php' ?>
     <?php
-         if($insert){
-                                           echo"<div class='alert alert-success alert-dismissible fade show' role='alert'>
+    if ($insert) {
+        echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
                                               <strong>Success!</strong> Your record has been inserted successfully.
                                                <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
                                                 <span aria-hidden='true'>&times;</span>
                                                   </button>
                                                    </div>";
-                                                }
-                                 ?>
+    }
+    ?>
     <!-- COMPLAINT-FORM -->
     <div class="bg-contact1" style="background-image: url('images/bg-01.jpg');">
         <div class="container-contact1">
@@ -59,7 +65,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                     </span>
 
                     <div class="wrap-input1 validate-input" data-validate="ID is required">
-                        <input class="input1" type="text" name="vname" placeholder="Your Name">
+                        <input class="input1" type="text" name="vname" placeholder="Your Name" required>
                         <span class="focus-input1"></span>
                         <span class="symbol-input1">
                             <i class="fa fa-user" aria-hidden="true"></i>
@@ -67,7 +73,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                     </div>
 
                     <div class="wrap-input1 validate-input" data-validate="ID is required">
-                        <input class="input1" type="text" name="vid" placeholder="Your Employee ID">
+                        <input class="input1" type="text" name="vid" placeholder="Your Employee ID" required>
                         <span class="focus-input1"></span>
                         <span class="symbol-input1">
                             <i class="fa fa-user" aria-hidden="true"></i>
@@ -75,30 +81,21 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                     </div>
 
                     <div class="wrap-input1 validate-input" data-validate="ID is required">
-                        <input class="input1" type="number" name="vno" placeholder="Your Mobile No.">
-                        <span class="focus-input1"></span>
-                        <span class="symbol-input1">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                        </span>
-                    </div>
-                    
-                    <div class="wrap-input1 validate-input" data-validate="ID is required">
-                        <input class="input1" type="email" name="vid" placeholder="Your Email-Id">
+                        <input class="input1" type="number" name="vno" placeholder="Your Mobile No." required>
                         <span class="focus-input1"></span>
                         <span class="symbol-input1">
                             <i class="fa fa-user" aria-hidden="true"></i>
                         </span>
                     </div>
 
-                    
                     <div class="wrap-input1 validate-input" data-validate="ID is required">
-                        <input class="input1" type="number" name="vaadhar" placeholder="Your Aadhar No.">
+                        <input class="input1" type="email" name="vemail" placeholder="Your Email-Id" required>
                         <span class="focus-input1"></span>
                         <span class="symbol-input1">
                             <i class="fa fa-user" aria-hidden="true"></i>
                         </span>
                     </div>
-                    
+
                     <div class="wrap-input1 validate-input" data-validate="Name is required">
                         <input class="input1" type="text" name="cname" placeholder="Accused Name">
                         <span class="focus-input1"></span>
@@ -116,73 +113,79 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                     </div>
 
                     <div class="wrap-input1 validate-input" data-validate="Required!">
-                        <textarea class="input1" name="complaint" placeholder="Complaint"></textarea>
+                        <textarea class="input1" name="complaint"
+                            placeholder="Complaint (Mention the date and approximate time of the incident)"
+                            required></textarea>
                         <span class="focus-input1"></span>
                     </div>
                     <br>
 
                     <div class="wrap-input1 validate-input" data-validate="ID is required">
-                        <input class="input1" type="text" name="org" placeholder="Organization Name">
+                        <input class="input1" type="text" name="org" placeholder="Organization Name" required>
                         <span class="focus-input1"></span>
                         <span class="symbol-input1">
                             <i class="fa fa-user" aria-hidden="true"></i>
                         </span>
                     </div>
-                           
-                   <table>
-                      <div>
-                        <tr>
-                           <td> <P id=organization>Organization Type</p></td>
-                          <td>
-                        <select name="org" id="oll">
-                            <option value="Private">Private</option>
-                            <option value="Public">Public</option>
-                            <option value="PSU">PSU</option>
-                                            </td>
-                                            </tr>
-                      </div>
-                    </table>
-                   
+
                     <table>
-                      <div>
-                        <tr>
-                           <td> <P id=organization>Departments</p></td>
-                          <td>
-                        <select name="org" id="oll">
-                            <option value="Healthcare">Healthcare</option>
-                            <option value="Education">Education</option>
-                            <option value="Industry">Industry</option>
-                            <option value="Marketing and Sales">Marketing and Sales</option>
-                            <option value="Finance">Finance</option>
-                            <option value="HR">HR</option>
-                            <option value="production">production</option>
-                            <option value="others">others</option>
-                                            </td>
-                                            </tr>
-                      </div>
+                        <div>
+                            <tr>
+                                <td>
+                                    <p id=organization>Organization Type</p>
+                                </td>
+                                <td>
+                                    <select name="orgtype" id="oll">
+                                        <option value="Private">Private</option>
+                                        <option value="Government">Government</option>
+                                        <option value="PSU">PSU</option>
+                                </td>
+                            </tr>
+                        </div>
+                    </table>
+
+                    <table>
+                        <div>
+                            <tr>
+                                <td>
+                                    <P id=organization>Departments</p>
+                                </td>
+                                <td>
+                                    <select name="vdepartment" id="oll">
+                                        <option value="Healthcare">Healthcare</option>
+                                        <option value="Education">Education</option>
+                                        <option value="Industry">Industry</option>
+                                        <option value="Marketing and Sales">Marketing and Sales</option>
+                                        <option value="Finance">Finance</option>
+                                        <option value="HR">HR</option>
+                                        <option value="production">production</option>
+                                        <option value="others">others</option>
+                                </td>
+                            </tr>
+                        </div>
                     </table>
 
 
-                   
-                     <br>
+
+                    <br>
                     <div>
                         <label>
-                            <input type="checkbox" name="Agreed"> I am sure about the Complaint
+                            <input type="checkbox" name="Agreed" required> I am sure about the Complaint
                         </label>
                     </div>
 
                     <div class="container-contact1-form-btn">
-                        <button class="contact1-form-btn">
+                        <button class="contact1-form-btn" name="submit" value="submit">
                             Send
                         </button>
                     </div>
 
-                  
-                  
-                    <button type="button" onclick="generate()" id="help14" name="action" > Generate id</button>
+
+
+                    <button type="button" onclick="generate()" id="help14" name="action"> Generate id</button>
                     <div class="box">
-                        your id is: <span id="otp" > </span>
-                        
+                        your id is: <span id="otp"> </span>
+
 
 
                     </div>
@@ -208,11 +211,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
         </div>
 
     </div>
-<!-- footer  -->
-<?php require 'utilities\_footer.php' ?> 
+    <!-- footer  -->
+    <?php require 'utilities\_footer.php' ?>
 
-<script src="tilt.jquery.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    <script src="tilt.jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
