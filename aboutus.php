@@ -40,7 +40,7 @@
                         It is the best platform to stay anonymous and get the work done. We act as an unbiased cover
                         between
                         complainee and workplaces. You can share your feelings on the blog page as it is
-                        pshycologocially proven that
+                        psychologically proven that
                         penning down a mishap is way more self-enhancing and provides deep contentment. YOU ARE NOT
                         ALONE IN THIS.</p>
                 </div>

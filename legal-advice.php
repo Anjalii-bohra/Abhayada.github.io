@@ -54,7 +54,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
             <div class="wrap-contact1">
                 <div>
                     <h2>Legal Advice</h2><br>
-                    <p> Our team of highly qualified, dedicated Layers and Law
+                    <p> Our team of highly qualified, dedicated Lawyers and Law
                         Firms
                         are on-line 24 hours a day to offer basic legal information over the net.</p>
 
