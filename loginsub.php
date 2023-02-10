@@ -42,12 +42,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+       
 
     <title>Login</title>
 </head>
 
 <body>
-    <?php require 'utilities/navbar.php' ?>
+    <?php require 'utilities\navbar.php' ?>
     <?php
     if ($login) {
         echo ' <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -66,10 +67,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div> ';
     }
     ?>
+    <div class="container1">
 
-    <div class="container my-4">
-        <form action="loginsub.php" method="post">
-            <img class="avatar" src="images\AA.jpeg">
+    <div class="container my-4" id="app1">
+       
+        <form action="loginsub.php" method="post" id="app2">
+            <!-- <img class="avatar" src="images\AA.jpeg"> -->
             <h2>Institute log-in</h2>
 
             <div class="form-group">
@@ -86,10 +89,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <a href="institute.php">New User?</a>
             <button type="submit" class="btn "> Log-in</button>
         </form>
+</div>
     </div>
+    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <link href="loginsub.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
