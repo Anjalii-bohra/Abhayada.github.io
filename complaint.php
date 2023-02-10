@@ -59,15 +59,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                     </span>
 
                     <div class="wrap-input1 validate-input" data-validate="ID is required">
-                        <input class="input1" type="text" name="vid" placeholder="Victim's Employee ID">
-                        <span class="focus-input1"></span>
-                        <span class="symbol-input1">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                        </span>
-                    </div>
-
-                    <div class="wrap-input1 validate-input" data-validate="Name is required">
-                        <input class="input1" type="text" name="cname" placeholder="Culprit Name">
+                        <input class="input1" type="text" name="vname" placeholder="Your Name">
                         <span class="focus-input1"></span>
                         <span class="symbol-input1">
                             <i class="fa fa-user" aria-hidden="true"></i>
@@ -75,7 +67,23 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                     </div>
 
                     <div class="wrap-input1 validate-input" data-validate="ID is required">
-                        <input class="input1" type="text" name="cid" placeholder="Culprit's Employee ID (OPTIONAL)">
+                        <input class="input1" type="text" name="vid" placeholder="Your Employee ID">
+                        <span class="focus-input1"></span>
+                        <span class="symbol-input1">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input1 validate-input" data-validate="ID is required">
+                        <input class="input1" type="number" name="vno" placeholder="Your Mobile No.">
+                        <span class="focus-input1"></span>
+                        <span class="symbol-input1">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    
+                    <div class="wrap-input1 validate-input" data-validate="ID is required">
+                        <input class="input1" type="email" name="vid" placeholder="Your Email-Id">
                         <span class="focus-input1"></span>
                         <span class="symbol-input1">
                             <i class="fa fa-user" aria-hidden="true"></i>
@@ -83,20 +91,80 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                     </div>
 
                     
-
-                    <div class="wrap-input1 validate-input" data-validate="Required!">
-                        <textarea class="input1" name="complaint" placeholder="Complaint"></textarea>
-                        <span class="focus-input1"></span>
-                    </div>
-
                     <div class="wrap-input1 validate-input" data-validate="ID is required">
-                        <input class="input1" type="text" name="ins" placeholder="Institute Name">
+                        <input class="input1" type="number" name="vaadhar" placeholder="Your Aadhar No.">
+                        <span class="focus-input1"></span>
+                        <span class="symbol-input1">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    
+                    <div class="wrap-input1 validate-input" data-validate="Name is required">
+                        <input class="input1" type="text" name="cname" placeholder="Accused Name">
                         <span class="focus-input1"></span>
                         <span class="symbol-input1">
                             <i class="fa fa-user" aria-hidden="true"></i>
                         </span>
                     </div>
 
+                    <div class="wrap-input1 validate-input" data-validate="ID is required">
+                        <input class="input1" type="text" name="cid" placeholder="Accused Employee ID (OPTIONAL)">
+                        <span class="focus-input1"></span>
+                        <span class="symbol-input1">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input1 validate-input" data-validate="Required!">
+                        <textarea class="input1" name="complaint" placeholder="Complaint"></textarea>
+                        <span class="focus-input1"></span>
+                    </div>
+                    <br>
+
+                    <div class="wrap-input1 validate-input" data-validate="ID is required">
+                        <input class="input1" type="text" name="org" placeholder="Organization Name">
+                        <span class="focus-input1"></span>
+                        <span class="symbol-input1">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                           
+                   <table>
+                      <div>
+                        <tr>
+                           <td> <P id=organization>Organization Type</p></td>
+                          <td>
+                        <select name="org" id="oll">
+                            <option value="Private">Private</option>
+                            <option value="Public">Public</option>
+                            <option value="PSU">PSU</option>
+                                            </td>
+                                            </tr>
+                      </div>
+                    </table>
+                   
+                    <table>
+                      <div>
+                        <tr>
+                           <td> <P id=organization>Departments</p></td>
+                          <td>
+                        <select name="org" id="oll">
+                            <option value="Healthcare">Healthcare</option>
+                            <option value="Education">Education</option>
+                            <option value="Industry">Industry</option>
+                            <option value="Marketing and Sales">Marketing and Sales</option>
+                            <option value="Finance">Finance</option>
+                            <option value="HR">HR</option>
+                            <option value="production">production</option>
+                            <option value="others">others</option>
+                                            </td>
+                                            </tr>
+                      </div>
+                    </table>
+
+
+                   
+                     <br>
                     <div>
                         <label>
                             <input type="checkbox" name="Agreed"> I am sure about the Complaint
