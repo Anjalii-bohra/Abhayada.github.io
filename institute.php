@@ -155,6 +155,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
             </div>
             <br><br>
+
+            <form name="add_name" id="add_name" method="post">
+             <div class="table-responsive">
+               <table class="table table-bordered" id="dynamic_field">
+                 <tr>
+                    <td><input type="text" name="skill[]" placeholder="Enter your Skill" class="form-control name_list" /></td>
+                        <td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>
+                </tr>
+             </table>
+ 
+           <!-- <input type="submit" name="submit" id="submit" class="btn btn-info" value="Submit" /> -->
+             </div>
+             </form>
             <div class="form">
                 <h2>CEO</h2>
                 <br>
