@@ -100,7 +100,7 @@ iframe {
 
 .container-contact1 {
     width: 100%;
-    min-height: 100vh;
+    min-height: 210vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -111,7 +111,7 @@ iframe {
 
 .wrap-contact1 {
     width: 1163px;
-    height: 800px;
+    height: 1250px;
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
@@ -143,6 +143,7 @@ iframe {
     line-height: 1.2;
     text-align: left;
     padding-bottom: 36px;
+    margin-top: 30PX;
 }
 
 input.input1 {
@@ -340,4 +341,14 @@ a {
 
 .logos {
     margin-right: 10px;
+}
+
+#organization {
+    font-size: 18px;
+    color: black;
+    font-weight: 1px;
+}
+
+#oll {
+    margin-left: 10px;
 }
