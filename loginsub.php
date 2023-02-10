@@ -1,12 +1,13 @@
 <?php
 $login = false;
 $showError = false;
-echo $_SERVER["REQUEST_METHOD"];
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-    include '/utilities/_dbconnect.php';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    include 'utilities/_dbconnect.php';
     $username = $_POST["username"];
-    $password = $_POST["password"]; 
-    
+    $password = $_POST["password"];
+
+
+    // $sql = "Select * from users where username='$username' AND password='$password'";
     $sql = "Select * from `user` where username='$username'";
     $result = mysqli_query($conn, $sql);
     $num = mysqli_num_rows($result);
@@ -22,92 +23,82 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 $showError = "Invalid Credentials";
             }
         }
-    }
-    else{
+
+    } else {
         $showError = "Invalid Credentials";
     }
 }
-    
+
 ?>
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
-    <script src="https://kit.fontawesome.com/c85d084fd0.js" crossorigin="anonymous"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    
-    <title>Log-in</title>
-   
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;500&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+    <title>Login</title>
 </head>
+
 <body>
-<?php require('utilities\navbar.php')?>
-     <?php
-    if($login){
-    echo ' <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <?php require 'utilities/navbar.php' ?>
+    <?php
+    if ($login) {
+        echo ' <div class="alert alert-success alert-dismissible fade show" role="alert">
         <strong>Success!</strong> You are logged in
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true"></span>
+            <span aria-hidden="true">&times;</span>
         </button>
     </div> ';
     }
-    if($showError){
-    echo ' <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>Error!</strong> '. $showError.'
+    if ($showError) {
+        echo ' <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Error!</strong> ' . $showError . '
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true"></span>
+            <span aria-hidden="true">&times;</span>
         </button>
     </div> ';
     }
     ?>
-      <!-- <img class="wave" src="wave0.5.svg"> -->
-      <div class="container ">
-        <div class="login">
-            <!-- <img src="..\girl.svg"> -->
-        </div>
-        <div class="login-container">
-            <form action="loginsub.php" method="post">
-                <img  class="avatar" src="images\AA.jpeg">
-                <h2>Institute log-in</h2>
 
-                <div class="input-div two focus">
-                    <div class="i">
-                        <i class="fas fa-envelope"></i>
+    <div class="container my-4">
+        <form action="loginsub.php" method="post">
+            <img class="avatar" src="images\AA.jpeg">
+            <h2>Institute log-in</h2>
 
-                    </div>
-                    <div>
-                        <!-- <h5>Email-id</h5> -->
-                        <input class="input" type="text" placeholder="Username" name="username">
+            <div class="form-group">
 
-                    </div>
-                </div> 
-                <div class="input-div three focus">
-                    <div class="i">
-                        <img src="pass-fill.svg">
-                    </div>
-                    <div>
-                        <!-- <h5> Contact No.</h5> -->
-                        <input class="input" type="password" placeholder="Password" name="password">
-                    </div>
-                </div>
-                
-                <a href="institute.php">New User?</a>
-                <!-- <a href="#">Forgot Password?</a> -->
-    
-                <button type="submit" class="btn"  >Log-in</button>
-                
-            </form>
+                <input type="text" placeholder="Username" name="username" class="form-control"
+                    aria-describedby="emailHelp">
 
-        </div>
-      </div>
+            </div>
+            <div class="form-group">
 
-      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-<?php require('utilities\_footer.php')?>
-      <link rel="stylesheet" href="loginsub.css"> 
+                <input class="form-control" type="password" placeholder="Password" name="password">
+            </div>
+
+            <a href="institute.php">New User?</a>
+            <button type="submit" class="btn "> Log-in</button>
+        </form>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
