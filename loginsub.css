@@ -1,4 +1,4 @@
-*{ 
+/* *{ 
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -32,7 +32,7 @@ color: #450920;
 
 
 
-.wave{
+/* .wave{
     position: absolute;
         height: 100%;
     left:0;
@@ -267,5 +267,50 @@ a {
    font-size: large;
    background-color: #fff;
    font-weight: 900;
+} */
+* {
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+
 }
- 
+
+body {
+   font-family: 'Roboto Slab', serif;
+   background-color: #a62b5a;
+}
+
+.form-control {
+   width: 300px;
+
+}
+
+h2 {
+   color: black;
+}
+
+.avatar {
+   width: 100px;
+   padding-bottom: 0px;
+
+}
+
+#app1 {
+   margin-left: 150px;
+}
+
+#app2 {
+   margin-top: 100px
+}
+
+.container1 {
+
+   width: 700px;
+   padding: 25px 30px;
+   border-radius: 25px;
+   background: #fff;
+   color: #450920;
+   margin-top: 7%;
+   margin-left: 350px;
+
+}
