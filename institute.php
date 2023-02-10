@@ -3,7 +3,7 @@ $showAlert = false;
 $insert = false;
 $showError = false;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include '../utilities/_dbconnect.php';
+    include 'utilities/_dbconnect.php';
     $username = $_POST["username"];
     $password = $_POST["password"];
     $cpassword = $_POST["cpassword"];
@@ -121,7 +121,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <br>
                 <div class="input-group card-box">
                     <span class="details"><b>Name</b></span>
-                    <input type="text" id="name" placeholder="Name" name="oname">
+                    <input type="text" id="name" placeholder="Name" name="oname" required>
                 </div>
                 <br>
                 <div class="input-group card-box">
@@ -206,14 +206,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <br>
                 <div class="input-group card-box">
                     <span class="details"><b>Username</b></span>
-                    <input type="text" class="pass" name="username" id="password" placeholder="Enter username"
+                    <input type="text" class="pass" name="username" id="password" placeholder="Enter username" required
                         minlength="8">
                 </div>
                 <br>
                 <div class="input-group card-box">
                     <span class="details"><b>Password (Minimum 8 Characters)</b></span>
                     <input type="password" id="pass" name="password" id="password" placeholder="Create a password"
-                        minlength="8">
+                        required minlength="8">
                 </div>
                 <br>
                 <div class="input-group card-box">
@@ -235,10 +235,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
+        </script>
     <link href="in.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <section class="foot">
         <div>
