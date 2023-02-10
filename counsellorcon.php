@@ -22,7 +22,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 <html lang="en">
 
 <head>
-    <title>Legal-Advice</title>
+    <title>Counsellor-Consultancy</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
@@ -53,20 +53,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
          <div class="container-contact1">
             <div class="wrap-contact1">
                 <div>
-                    <h2>Legal Advice</h2><br>
-                    <p> Our team of highly qualified, dedicated Lawyers and Law
-                        Firms
-                        are on-line 24 hours a day to offer basic legal information over the net.</p>
+                    <h2>Counsellor Consultancy</h2><br>
+                    <p> Our team of highly qualified, dedicated Counsellors and Counselling experts
+                        are on-line 24 hours a day to offer basic mental peace over the net.</p>
 
 
                     <p> We understand that many individuals simply do not have the time or
-                        desire to attend a lawyers office, fill out complicated forms and pay huge fees in
+                        desire to attend counselling sessions, fill out complicated forms and pay huge fees in
                         order
-                        to obtain basic information. We have found that appropriate legal Information given
+                        to obtain basic information. We have found that appropriate counselling given
                         initially is often sufficient to solve our client's problems.</p>
 
                     <b><br>
-                        Submit Your Query
+                        Let's go
                         <br><br>
                         <div class="wrap-input1 validate-input" data-validate="Valid email is required: ex@abc.xyz">
                             <input class="input1" type="text" id="email" name="email" placeholder="Email">
@@ -76,7 +75,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                             </span>
                         </div>
                         <div class="wrap-input1 validate-input" data-validate="Required!">
-                            <textarea class="input1" id="message" name="message" placeholder="Query"></textarea>
+                            <textarea class="input1" id="message" name="message" placeholder="Express your feelings here"></textarea>
                             <span class="focus-input1"></span>
                         </div>
                         <div class="container-contact1-form-btn">
