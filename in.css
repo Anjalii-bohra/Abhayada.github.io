@@ -3,7 +3,7 @@ body {
 }
 
 form {
-    height: 1700px;
+    height: 1800px;
     width: 800px;
     background-color: #fff;
     position: absolute;
@@ -138,4 +138,13 @@ section {
 
 .logos {
     margin-right: 13px;
+}
+
+#table-responsive {
+    margin-left: 50%;
+}
+
+#dynamic_field {
+    width: 700px;
+    margin-left: 70px;
 }
