@@ -13,11 +13,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $org = $_POST["org"];
     $orgtype = $_POST["orgtype"];
     $vdepartment = $_POST["vdepartment"];
-
+ $id = uniqid() . "_ABHY";
 
     //sql query
 
-    $sql = " INSERT INTO `complaint` ( `vname`, `vid`, `vno`,`vemail`, `cname`, `cid`, `complaint` ,`org`, `orgtype`,`vdepartment`, `date`) VALUES ( '$vname','$vid','$vno','$vemail', '$cname', '$cid', '$complaint','$org','$orgtype','$vdepartment', current_timestamp())";
+    $sql = " INSERT INTO `complaint` ( `id`,`vname`, `vid`, `vno`,`vemail`, `cname`, `cid`, `complaint` ,`org`, `orgtype`,`vdepartment`, `date`) VALUES ( '$id','$vname','$vid','$vno','$vemail', '$cname', '$cid', '$complaint','$org','$orgtype','$vdepartment', current_timestamp())";
     $result = mysqli_query($conn, $sql);
     //checking
     if ($result) {
@@ -174,36 +174,40 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </label>
                     </div>
 
-                    <div class="container-contact1-form-btn">
+                    <!-- <div class="container-contact1-form-btn">
                         <button class="contact1-form-btn" name="submit" value="submit">
+                            Send
+                        </button>
+                    </div> -->
+                     <div class="container-contact1-form-btn" >
+                        <button class="contact1-form-btn " id="gen1" name="submit"value="submit" type="button" 
+                        class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                             Send
                         </button>
                     </div>
 
-
-
-                    <button type="button" onclick="generate()" id="help14" name="action"> Generate id</button>
-                    <div class="box">
-                        your id is: <span id="otp"> </span>
-
-
-
-                    </div>
-                    <script>
-                        function generate() {
-                            var num = '1234567890abcdexyz';
-                            let OTP = 'ABYD23';
-
-                            for (let i = 0; i < 4; i++) {
-
-                                OTP += num[Math.floor(Math.random() * 10)];
-
-                            }
-
-                            document.getElementById('otp').innerHTML = OTP;
-                        }
-                    </script>
-
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Your Complaint is stored, wait for the further process</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <?php
+        echo"your id is $id";
+        ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
 
                 </form>
             </div>
