@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $org = $_POST["org"];
     $orgtype = $_POST["orgtype"];
     $vdepartment = $_POST["vdepartment"];
- $id = uniqid() . "_ABHY";
+    $id = uniqid() . "_ABHY";
 
     //sql query
 
@@ -46,6 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($insert) {
         echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
                                               <strong>Success!</strong> Your record has been inserted successfully.
+                                              $id 
                                                <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
                                                 <span aria-hidden='true'>&times;</span>
                                                   </button>
@@ -174,40 +175,43 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </label>
                     </div>
 
-                    <!-- <div class="container-contact1-form-btn">
-                        <button class="contact1-form-btn" name="submit" value="submit">
-                            Send
-                        </button>
-                    </div> -->
-                     <div class="container-contact1-form-btn" >
-                        <button class="contact1-form-btn " id="gen1" name="submit"value="submit" type="button" 
-                        class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    <div class="container-contact1-form-btn">
+                        <button class="contact1-form-btn" name="submit" value="submit" data-toggle="modal"
+                            data-target="#exampleModal">
                             Send
                         </button>
                     </div>
+                    <!-- <div class="container-contact1-form-btn">
+                        <button class="contact1-form-btn " name="submit" value="submit" type="button"
+                            class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            Send
+                        </button>
+                    </div> -->
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Your Complaint is stored, wait for the further process</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <?php
-        echo"your id is $id";
-        ?>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-      </div>
+                    <!-- Modal -->
+                    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Your Complaint is stored, wait for
+                                        the further process</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <?php
+
+                                    ?>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button> 
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+    </div> -->
 
                 </form>
             </div>

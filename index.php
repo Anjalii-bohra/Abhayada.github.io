@@ -27,7 +27,7 @@
                 <br>
                 <br>
                 <br>
-                <a href="tracking.html" class="btn-complaint" style="text-decoration: none;">Track your complaint
+                <a href="tracking.php" class="btn-complaint" style="text-decoration: none;">Track your complaint
                     status</a>
             </div>
             <div class="col-md-5 col-sm-10 order-2 order-md-1 ">
@@ -193,12 +193,12 @@
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
     </script> -->
     <script>
-    $(function() {
-        $(document).scroll(function() {
-            var $nav = $("#mainnav");
-            $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $("#mainnav");
+                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+            });
         });
-    });
     </script>
     <link rel="stylesheet" href="main.css">
 </body>

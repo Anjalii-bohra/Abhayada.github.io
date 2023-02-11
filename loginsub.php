@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-       
+
 
     <title>Login</title>
 </head>
@@ -69,29 +69,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     ?>
     <div class="container1">
 
-    <div class="container my-4" id="app1">
-       
-        <form action="loginsub.php" method="post" id="app2">
-            <!-- <img class="avatar" src="images\AA.jpeg"> -->
-            <h2>Institute log-in</h2>
+        <div class="container my-4" id="app1">
 
-            <div class="form-group">
+            <form action="loginsub.php" method="post" id="app2">
+                <!-- <img class="avatar" src="images\AA.jpeg"> -->
+                <h2>Organisation log-in</h2>
 
-                <input type="text" placeholder="Username" name="username" class="form-control"
-                    aria-describedby="emailHelp">
+                <div class="form-group">
 
-            </div>
-            <div class="form-group">
+                    <input type="text" placeholder="Username" name="username" class="form-control"
+                        aria-describedby="emailHelp">
 
-                <input class="form-control" type="password" placeholder="Password" name="password">
-            </div>
+                </div>
+                <div class="form-group">
 
-            <a href="institute.php">New User?</a>
-            <button type="submit" class="btn "> Log-in</button>
-        </form>
-</div>
+                    <input class="form-control" type="password" placeholder="Password" name="password">
+                </div>
+
+                <a href="institute.php">New User?</a>
+                <button type="submit" class="btn "> Log-in</button>
+            </form>
+        </div>
     </div>
-    
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
