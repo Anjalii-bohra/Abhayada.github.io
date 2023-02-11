@@ -25,6 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $HRname = $_POST["hrname"];
     $HRmail = $_POST["hrmail"];
     $HRcon = $_POST["hrcon"];
+    $id = uniqid();
 
     // Check whether this username exists
     $existSql = "SELECT * FROM `institute` WHERE username = '$username'";
@@ -39,10 +40,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $hash = password_hash($password, PASSWORD_DEFAULT);
 
             //insert into institute table
-            $sql = "INSERT INTO institute (`Oname`, `HRcon`, `Oemail`, `Ocon`, `address`, `city`, `state`, `zip`, `CEOname`, `CEOmail`, `CEOcon`, `HRname`, `HRmail`, `username`, `password`, `dt`) VALUES ('$Oname', '$HRcon', '$Oemail', '$Ocon', '$address', '$city', '$state', '$zip', '$CEOname', '$CEOmail', '$CEOcon', '$HRname', '$HRmail','$username', '$hash', current_timestamp());
+            $sql = "INSERT INTO institute (`orgid`,`Oname`, `HRcon`, `Oemail`, `Ocon`, `address`, `city`, `state`, `zip`, `CEOname`, `CEOmail`, `CEOcon`, `HRname`, `HRmail`, `username`, `password`, `dt`) VALUES (' $id','$Oname', '$HRcon', '$Oemail', '$Ocon', '$address', '$city', '$state', '$zip', '$CEOname', '$CEOmail', '$CEOcon', '$HRname', '$HRmail','$username', '$hash', current_timestamp());
             
-            INSERT INTO `user` (`username`,`password`)
-             VALUES ('$username', '$hash');";
+            INSERT INTO `user` (`orgid`,`username`,`password`)
+             VALUES ('$id','$username', '$hash');";
 
             //insert into user table
             // $sql = "INSERT INTO user (`username`,`password`)
@@ -157,17 +158,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <br><br>
 
             <form name="add_name" id="add_name" method="post">
-             <div class="table-responsive">
-               <table class="table table-bordered" id="dynamic_field">
-                 <tr>
-                    <td><input type="text" name="skill[]" placeholder="Enter your Skill" class="form-control name_list" /></td>
-                        <td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>
-                </tr>
-             </table>
- 
-           <!-- <input type="submit" name="submit" id="submit" class="btn btn-info" value="Submit" /> -->
-             </div>
-             </form>
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dynamic_field">
+                        <tr>
+                            <td><input type="text" name="skill[]" placeholder="Enter your Skill"
+                                    class="form-control name_list" /></td>
+                            <td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>
+                        </tr>
+                    </table>
+
+                    <!-- <input type="submit" name="submit" id="submit" class="btn btn-info" value="Submit" /> -->
+                </div>
+            </form>
             <div class="form">
                 <h2>CEO</h2>
                 <br>
