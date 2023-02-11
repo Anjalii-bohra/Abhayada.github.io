@@ -32,7 +32,7 @@
             </div>
             <div class="col-md-5 col-sm-10 order-2 order-md-1 ">
                 <div id="help4">
-                    <img src="images\landingpage\lp2.png" id="img1" class="img-fluid">
+                    <img src="home.png" id="img1" class="img-fluid" style="border-radius: 10%">
                 </div>
             </div>
         </div>
@@ -193,12 +193,12 @@
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
     </script> -->
     <script>
-        $(function () {
-            $(document).scroll(function () {
-                var $nav = $("#mainnav");
-                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
-            });
+    $(function() {
+        $(document).scroll(function() {
+            var $nav = $("#mainnav");
+            $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
         });
+    });
     </script>
     <link rel="stylesheet" href="main.css">
 </body>
