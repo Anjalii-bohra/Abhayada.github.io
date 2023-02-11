@@ -25,7 +25,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $HRname = $_POST["hrname"];
     $HRmail = $_POST["hrmail"];
     $HRcon = $_POST["hrcon"];
-    $id = uniqid();
 
     // Check whether this username exists
     $existSql = "SELECT * FROM `institute` WHERE username = '$username'";
@@ -40,10 +39,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $hash = password_hash($password, PASSWORD_DEFAULT);
 
             //insert into institute table
-            $sql = "INSERT INTO institute (`orgid`,`Oname`, `HRcon`, `Oemail`, `Ocon`, `address`, `city`, `state`, `zip`, `CEOname`, `CEOmail`, `CEOcon`, `HRname`, `HRmail`, `username`, `password`, `dt`) VALUES (' $id','$Oname', '$HRcon', '$Oemail', '$Ocon', '$address', '$city', '$state', '$zip', '$CEOname', '$CEOmail', '$CEOcon', '$HRname', '$HRmail','$username', '$hash', current_timestamp());
+            $sql = "INSERT INTO institute (`Oname`, `HRcon`, `Oemail`, `Ocon`, `address`, `city`, `state`, `zip`, `CEOname`, `CEOmail`, `CEOcon`, `HRname`, `HRmail`, `username`, `password`, `dt`) VALUES ('$Oname', '$HRcon', '$Oemail', '$Ocon', '$address', '$city', '$state', '$zip', '$CEOname', '$CEOmail', '$CEOcon', '$HRname', '$HRmail','$username', '$hash', current_timestamp());
             
-            INSERT INTO `user` (`orgid`,`username`,`password`)
-             VALUES ('$id','$username', '$hash');";
+            INSERT INTO `user` (`username`,`password`)
+             VALUES ('$username', '$hash');";
 
             //insert into user table
             // $sql = "INSERT INTO user (`username`,`password`)
@@ -161,7 +160,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dynamic_field">
                         <tr>
-                            <td><input type="text" name="skill[]" placeholder="Enter your Skill"
+                            <td><input type="text" name="skill[]" placeholder="Enter The Departments"
                                     class="form-control name_list" /></td>
                             <td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>
                         </tr>
@@ -246,8 +245,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </section>
     </form>
-
-
+    <br>
+    <br>
+    <br>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
         </script>
