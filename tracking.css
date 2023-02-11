@@ -2,7 +2,7 @@ body {
   background-color: #f9dbbd;
   color: white;
   font-family: 'Roboto Slab', serif;
-  font-weight: 900;
+  /* font-weight: 900; */
 
 }
 
@@ -30,7 +30,7 @@ form {
 
 #button-addon2 {
   margin-left: 150px;
-  font-weight: 500;
+  /* font-weight: 500; */
 }
 
 #progtrack {
@@ -116,7 +116,7 @@ ol.progress-meter li.todo:before {
 
 b {
   font-size: x-large;
-  font-weight: 900;
+  /* font-weight: 900; */
 }
 
 .pr {
@@ -126,7 +126,7 @@ b {
   margin: auto;
   color: #fff;
   margin-left: 100px;
-  font-weight: 700;
+  /* font-weight: 700; */
 }
 
 #oof {
@@ -183,7 +183,7 @@ h4 {
   color: #450920;
   border-radius: 50%;
   font-style: italic;
-  font-weight: 600;
+  /* font-weight: 600; */
   text-align: center;
 
 }
@@ -221,7 +221,7 @@ a {
 .nav-link {
   color: #f9dbbd;
   font-size: large;
-  font-weight: 900;
+  /* font-weight: 900; */
 }
 
 .navbar-toggler-icon {
@@ -258,7 +258,7 @@ a {
   border: none;
   font-size: large;
   background-color: #fff;
-  font-weight: 900;
+  /* font-weight: 900; */
 }
 
 #fpara {
