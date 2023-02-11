@@ -1,3 +1,5 @@
+<?php include 'utilities/_dbconnect.php';
+?>
 <?php
 session_start();
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
@@ -86,11 +88,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                     <div>
                         <h1>
                             <?php
+                            // $var = $_SESSION['Oname'];
                             $sql = "SELECT *
-                             FROM complaint c
-                             WHERE EXISTS(SELECT i.Oname 
-                             FROM institute i 
-                             WHERE c.institute = i.Oname); ";
+                             FROM complaint c ";
 
                             //    $sql = "SELECT * FROM `complaint` where ";
                             $result = mysqli_query($conn, $sql);
@@ -141,12 +141,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                                     </thead>
                                     <tbody>
                                         <?php
-                                        $sql = "SELECT *
-                               FROM complaint c
-                               WHERE EXISTS(SELECT i.Oname 
-                               FROM institute i 
-                               WHERE c.institute = i.Oname); ";
-                                        $result = mysqli_query($conn, $sql);
+                                        $dsql = "";
+                                        $result = mysqli_query($conn, $dsql);
                                         $sno = 0;
                                         while ($row = mysqli_fetch_assoc($result)) {
                                             $sno = $sno + 1;
@@ -155,7 +151,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                                 <td>" . $row['vid'] . "</td>
                                 <td>" . $row['cname'] . "</td>
                                 <td>" . $row['cid'] . "</td>
-                                <td>" . $row['message'] . "</td>
+                                <td>" . $row['complaint'] . "</td>
                                 </tr>";
                                             // <td>".$row['institute']."</td>
                                         }
