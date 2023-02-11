@@ -1,3 +1,6 @@
+<?php
+include "../Utilities/_dbconnect.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,13 +9,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashoard</title>
-    <link rel="stylesheet" href="admin.css">
+    <!-- <link rel="stylesheet" href="admin.css"> -->
+    <link href="admin.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -22,13 +27,13 @@
     <input type="checkbox" id="nav-toggle">
     <div class="sidebar">
         <div class="sidebar-brand">
-            <h2><span class="lab la-accusoft"></span> <span>Abhayada</span></h2>
+            <h2> <span>Abhayada</span></h2>
 
         </div>
         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <a href="admin.html" class="active"><span class="las la-igloo"></span> Dashboard</a>
+                    <a href="superadmin.php" class="active"><span class="las la-igloo"></span> Dashboard</a>
                 </li>
                 <li>
                     <a href="adminInstitute.html"><span class="las la-users"></span>Institute</a>
@@ -40,7 +45,7 @@
                     <a href="adminSolved.html"><span class="las la-clipboard-list"></span>Solved Complaints</a>
                 </li>
                 <li>
-                    <a href="adminDomestic.html"><span class="las la-clipboard-list"></span>Statistics</a>
+                    <a href="idashstats.php"><span class="las la-clipboard-list"></span>Statistics</a>
                 </li>
             </ul>
 
@@ -51,14 +56,11 @@
     <div class="main-content">
         <header>
             <h1>
-                <label for="nav-toggle">
-                    <span class="las la-bars"></span>
-                </label>
                 Dashboard
             </h1>
 
             <div class="user-wrapper">
-                <img src="wave0.5.svg" width="40px" height="40px" alt="">
+
                 <div>
                     <h4>Ravi Patel</h4>
                     <small>Super Admin</small>
@@ -70,7 +72,14 @@
             <div class="cards">
                 <div class="card-single">
                     <div>
-                        <h1>0</h1>
+                        <h1>
+                            <?php
+                            $sql = "SELECT * FROM `institute`  ";
+                            $result = mysqli_query($conn, $sql);
+                            $num = mysqli_num_rows($result);
+                            echo "" . $num . " ";
+                            ?>
+                        </h1>
                         <a href="adminInstitute.html">Institute</a>
 
                     </div>
@@ -80,7 +89,14 @@
                 </div>
                 <div class="card-single">
                     <div>
-                        <h1>0</h1>
+                        <h1>
+                            <?php
+                            $sql = "SELECT * FROM `complaint`  ";
+                            $result = mysqli_query($conn, $sql);
+                            $num = mysqli_num_rows($result);
+                            echo "" . $num . " ";
+                            ?>
+                        </h1>
                         <a href="adminComplaints.html">Complaints</a>
 
                     </div>
@@ -124,13 +140,29 @@
                                 <table class="table" id="myTable">
                                     <thead>
                                         <tr>
-                                            <th scope="col">sno</th>
-                                            <th scope="col">vid</th>
-                                            <th scope="col">cname</th>
-                                            <th scope="col">cid</th>
-                                            <th scope="col">complaint</th>
-                                            <!-- <th scope="col">institute</th> -->
+                                            <th scope="col" rowspan="2">sno</th>
+                                            <th colspan="4" scope="col">Complainee</th>
+                                            <th colspan="2" scope="col">Accused</th>
+                                            <th scope="col" rowspan="2">Complaint</th>
+                                            <th colspan="3" scope="col">Organisation</th>
                                         </tr>
+
+                                        <tr>
+                                            <th scope="col">Employee ID</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Contact</th>
+                                            <th scope="col">Email</th>
+
+                                            <th scope="col">Employee ID</th>
+                                            <th scope="col">Name</th>
+
+
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Sector</th>
+                                            <th scope="col">Department</th>
+
+                                        </tr>
+
                                     </thead>
                                     <tbody>
                                         <?php
@@ -143,9 +175,15 @@
                                             echo "<tr>
                                 <th scope='row'>" . $sno . "</th>
                                 <td>" . $row['vid'] . "</td>
-                                <td>" . $row['cname'] . "</td>
+                                <td>" . $row['vname'] . "</td>
+                                <td>" . $row['vno'] . "</td>
+                                <td>" . $row['vemail'] . "</td>
                                 <td>" . $row['cid'] . "</td>
+                                <td>" . $row['cname'] . "</td>
                                 <td>" . $row['complaint'] . "</td>
+                                <td>" . $row['org'] . "</td>
+                                <td>" . $row['orgtype'] . "</td>
+                                <td>" . $row['vdepartment'] . "</td>
                                 </tr>";
                                             // <td>".$row['institute']."</td>
                                         }
@@ -162,6 +200,7 @@
 
     </main>
     </div>
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
