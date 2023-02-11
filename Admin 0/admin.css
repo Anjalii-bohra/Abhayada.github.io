@@ -11,7 +11,7 @@
 
 
 .sidebar{
-    width: 345px;
+    width: 260px;
     position: fixed;
     height: 100%;
     left:0;
@@ -97,7 +97,7 @@
 
 .main-content{
     transition: margin-left 300ms;
-    margin-left: 345px;
+    margin-left: 260px;
 }
 
 header{
@@ -108,8 +108,8 @@ header{
     padding:1rem 1.5rem;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.3); 
     position: fixed; 
-    left: 345px;
-    width: calc(100% - 345px);
+    left: 260px;
+    width: calc(100% - 260px);
     top: 0;
     z-index: 100;
     transform: left 300ms ; 
@@ -212,12 +212,6 @@ main{
 
 
 
-
-
-
-
- 
-
 .card-single:last-child h1,
 .card-single last-child div:first-child span
 .card-single last-child div:last-child span {
@@ -234,7 +228,7 @@ main{
 }
 .card{
     background: #fff;
-    width: 150%;
+    width: fit-content;
     border-radius: 5px;
 }
 
