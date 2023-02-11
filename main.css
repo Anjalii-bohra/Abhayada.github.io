@@ -28,6 +28,9 @@ p {
     padding-bottom: 5%;
 }
 
+#img1 {
+    border-radius: 5px;
+}
 
 /* box */
 .icon-boxes {
@@ -216,12 +219,6 @@ h2 {
     font-weight: 100;
 }
 
-/* .dropdown .dropdown-toggle {
-    border: none;
-    font-size: large;
-    background-color: #fff;
-    font-weight: 900;
-} */
 
 
 @media (max-width: 1200px) {
