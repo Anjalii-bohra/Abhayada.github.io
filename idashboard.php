@@ -141,13 +141,18 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                                     </thead>
                                     <tbody>
                                         <?php
-                                        $dsql = "";
-                                        $result = mysqli_query($conn, $dsql);
+include "utilities/_dbconnect.php";
+$sql = "SELECT c.row
+                                        FROM complaint c
+                                        JOIN institute i  ON c.primarykey = i.foreignkey ";
+                                        
+                                        $result = mysqli_query($conn, $sql);
                                         $sno = 0;
                                         while ($row = mysqli_fetch_assoc($result)) {
                                             $sno = $sno + 1;
-                                            echo "<tr>
-                                <th scope='row'>" . $sno . "</th>
+                                            echo " 
+                                            <tr>
+                                <th scope='row'> " . $sno . " </th>
                                 <td>" . $row['vid'] . "</td>
                                 <td>" . $row['cname'] . "</td>
                                 <td>" . $row['cid'] . "</td>
@@ -169,26 +174,26 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
     <!-- Optional JavaScript; choose one of the two! -->
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
-        crossorigin="anonymous"></script>
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
+    </script>
     <link rel="stylesheet" href=" //cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
     <script src="//cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
 
     <script>
-        $(document).ready(function () {
-            $('#myTable').DataTable();
-        });
+    $(document).ready(function() {
+        $('#myTable').DataTable();
+    });
     </script>
     <script src="//cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
 
 
     <script>
-        $(document).ready(function () {
-            $('#myTable').DataTable();
-        });
+    $(document).ready(function() {
+        $('#myTable').DataTable();
+    });
     </script>
 
 </body>
