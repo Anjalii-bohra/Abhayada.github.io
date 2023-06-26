@@ -156,7 +156,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
             <br><br>
 
-            <form name="add_name" id="add_name" method="post">
+            <!-- <form name="add_name" id="add_name" method="post">
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dynamic_field">
                         <tr>
@@ -166,9 +166,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </tr>
                     </table>
 
-                    <!-- <input type="submit" name="submit" id="submit" class="btn btn-info" value="Submit" /> -->
-                </div>
-            </form>
+                     <input type="submit" name="submit" id="submit" class="btn btn-info" value="Submit" /> 
+            </div>
+    </form> -->
             <div class="form">
                 <h2>CEO</h2>
                 <br>
@@ -250,10 +250,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <br>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-        </script>
+    </script>
     <link href="in.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <section class="foot">
         <div>
